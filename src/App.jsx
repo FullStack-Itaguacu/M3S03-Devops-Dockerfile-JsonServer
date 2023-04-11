@@ -1,7 +1,7 @@
-import react from 'react' ;
+import React from 'react' ;
 import './App.css';
 import './icons.jsx';
-import AppRouter from './Router.jsx';
+import AppRouter from './Router';
 
 const API = "http://localhost:5000";
 

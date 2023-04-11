@@ -1,32 +1,34 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import { AuthContext } from './contexts/auth';
+import { AuthContextProvider, AuthContext } from './contexts/auth';
 import LoginPage from './pages/Login/LoginPage';
 import HomePage from './pages/Home/HomePage';
 
 const AppRouter = () => {
-    const [user, setUser] = useState(null); 
-    const login = (email, password) => {
-        console.log(login, {email, password});
-        setUser({email, password});
-    };
-    const logout = () => {
-        console.log(logout)
-    };
+    const Private = ({children}) => {
+        const {authenticated, loading} = useContext(AuthContext);
+            if (loading) {
+                return <div className='loading'>Carregando...</div>;
+            }
 
-    // A autenticação é um Boolean (user == null ? false : true)
-    // !! converte o valor para Boolean    
+            if (!authenticated) {
+                return <Navigate to="/login" />;
+            } else {
+                return children;
+            }
+        };
+
     return (
         <Router>
-            <AuthContext.Provider value={{authenticated: !!user, user, login, logout}}>
+            <AuthContextProvider>        
             <Routes>
-                <Route path="/login" element={<LoginPage />} />
-                <Route path="/" element={<HomePage />} />
+                <Route exact path="/login" element={<LoginPage />} />
+                <Route exact path="/" element={<Private><HomePage /></Private>} /> 
                 <Route path="*" element={<Navigate to="/" />} />
             </Routes>
-            </AuthContext.Provider>
+            </AuthContextProvider>
         </Router>
     );
-}
+};
 
 export default AppRouter;
