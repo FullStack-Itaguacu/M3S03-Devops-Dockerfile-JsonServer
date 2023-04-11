@@ -1,0 +1,53 @@
+import React from "react";
+import { useState, useEffect } from "react";
+import "./LoginPage.css";
+
+const LoginPage = () => {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        console.log("submit", {email, password});
+        
+    }
+
+
+    return (
+        <div id="login">
+        <h1 className="titulo">Inicial Login</h1>
+        <form className="form" onSubmit={handleSubmit}>
+            <div className="form-group">
+                <label htmlFor="email">Email</label>
+                <input 
+                type="email" 
+                name="email" 
+                placeholder="Digite seu Email..." 
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                />
+            </div> 
+            <div className="form-group">
+                <label htmlFor="password">Senha</label>
+                <input 
+                type="password" 
+                name="password" 
+                placeholder="Digite sua senha ..." 
+                required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                />
+                <p>Senha com no mínimo 8 caracteres e números</p>
+            </div> 
+            <div className="btn-form-group">
+                <button type="submit" className="btn-form-group">Entrar</button>
+            </div>
+        </form>      
+        </div>
+    );
+}
+
+export default LoginPage;

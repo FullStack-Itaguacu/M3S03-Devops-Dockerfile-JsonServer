@@ -1,3 +1,54 @@
 {
-    "data": []
+    "farmacia": [
+        {
+            "id": 1,
+            "nome": "Farmacia 1",
+            "telefone": "123456789",
+            "latitude": 1.0,
+            "longitude": 1.0,
+            "horario": "Segunda à Domingo das 8:00 a 20:00",
+            "imagen": "http://farmacia1.com",
+            "productos": [
+                {
+                    "id": 1,
+                    "nome": "Produto 1",
+                    "descricao": "Descricao 1",
+                    "preco": 1.0,
+                    "imagem": "http://farmacia1.com/produto1.jpg"
+                },
+                {
+                    "id": 2,
+                    "nome": "Produto 2",
+                    "descricao": "Descricao 2",
+                    "preco": 2.0,
+                    "imagem": "http://farmacia1.com/produto2.jpg"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "nome": "Farmacia 2",
+            "telefone": "123456789",
+            "latitude": 1.0,
+            "longitude": 1.0,
+            "horario": "Segunda à Domingo das 8:00 a 20:00",
+            "imagen": "http://farmacia2.com",
+            "productos": [
+                {
+                    "id": 1,
+                    "nome": "Produto 1",
+                    "descricao": "Descricao 1",
+                    "preco": 1.0,
+                    "imagem": "http://farmacia2.com/produto1.jpg"
+                },
+                {
+                    "id": 2,
+                    "nome": "Produto 2",
+                    "descricao": "Descricao 2",
+                    "preco": 2.0,
+                    "imagem": "http://farmacia2.com/produto2.jpg"
+                }
+            ]
+        }
+    ]
 }
