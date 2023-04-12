@@ -1,6 +1,5 @@
 import React, {useState, useEffect, createContext} from "react";
 import { useNavigate } from "react-router-dom";
-import {api, createSession} from "../services/api";
 
 // Criando o contexto de autenticação em uma area <protegida>
 export const AuthContext = createContext();

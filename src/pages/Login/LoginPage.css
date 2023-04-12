@@ -44,7 +44,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 #login .btn-form-group [type="submit"] {
@@ -65,4 +65,11 @@
 #login .btn-form-group [type="submit"]:hover {
     background-color: #22df42;
     transition: .3s;
+}
+
+#login .p-form {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: bold;  
 }
