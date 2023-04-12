@@ -7,10 +7,9 @@ import HomePage from './pages/Home/HomePage';
 const AppRouter = () => {
     const Private = ({children}) => {
         const {authenticated, loading} = useContext(AuthContext);
-            if (loading) {
-                return <div className='loading'>Carregando...</div>;
+            if(loading) {
+                return <div className="loading">Carregando...</div>;
             }
-
             if (!authenticated) {
                 return <Navigate to="/login" />;
             } else {

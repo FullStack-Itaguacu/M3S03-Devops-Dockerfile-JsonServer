@@ -13,8 +13,8 @@ const LoginPage = () => {
         e.preventDefault();
 
         console.log("submit", {email, password});
-        login(email, password) //intregração com o meu contexto / consequentemente com a minha api
-    }
+        login(email, password); //intregração com o meu contexto / consequentemente com a minha api
+    };
 
 
     return (

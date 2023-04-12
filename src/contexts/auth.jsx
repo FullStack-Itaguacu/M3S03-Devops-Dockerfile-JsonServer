@@ -9,51 +9,43 @@ export const AuthContextProvider = ({children}) => {
     const navigate = useNavigate();
     const [user, setUser] = useState(null); 
     const [loading, setLoading] = useState(true); // para carregar a pagina
-
+    
     useEffect(() => {
-        const recoveredUser = localStorage.getItem("user");
-        if(recoveredUser){
-            setUser(JSON.parse(recoveredUser));
+        const recoveredUser = localStorage.getItem("user"); // pega o usuario do localstorage
+        
+        if(recoveredUser) { // se existir um usuario no localstorage
+            setUser(JSON.parse(recoveredUser)); // converte o usuario para JSON
         }
-        setLoading(false);
+        setLoading(false); // ajuda no carregar a pagina
     }, []);
 
-    const login = async (email, password) => {
-        // api criar uma session, retorna um usuario
-        const response = await createSession({email, password});
-        console.log("login", response.data);
-
-        //api criar uma session, retorna um usuario
-        //const loggerUser = {
-        //    id: "123",
-        //    email,
-        //};
-        const loggerUser = response.data.user;
-        const token = response.data.token;
-
-        // Salva o usuario no localstorage
-        localStorage.setItem("user", JSON.stringify(loggerUser));
-        // Salva o token no localstorage
-        localStorage.setItem("token", token);
-
-        // API sempre envia um Beader token quando é solicitado uma requisição
-        api.defaults.headers.Authorization = `Bearer ${token}`;
-
+    const login = (email, password) => {
         
+        console.log("login auth", {email, password});
+
+        // api criar uma sessão  sem precisar de um servidor backend, até o momento
+        // esta retorna um usuario com id e email
+        const loggerUser = {
+            id:"123",
+            email, 
+        }
+
+        localStorage.setItem("user", JSON.stringify(loggerUser)); // salva o usuario no localstorage
 
         // Simulando uma autenticação
-        //if(password === "123456789"){
-        setUser(loggerUser);//com o usuario logado
-        navigate("/"); // redireciona para a pagina inicial
-        //}
-
+        if(password === "123456789"){
+            setUser(loggerUser);//com o usuario logado
+            navigate("/"); // redireciona para a pagina inicial
+            } else {
+            alert("Email ou Senha incorreta");
+        };
     };
-    const logout = () => {
+        
+        
+   const logout = () => {
         console.log("logout");
         localStorage.removeItem("user"); // remove o usuario do localstorage
-        localStorage.removeItem("token"); // remove o token do localstorage
-        api.defaults.headers.Authorization = null; // remove o token do header
-        //setUser(null); // remove o usuario do estado
+        setUser(null); // remove o usuario do estado
         navigate("/login");// redireciona para a pagina de login
     };
 
