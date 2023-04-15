@@ -1,27 +1,21 @@
- {
-    "users": [
-        {
-            "id": 1,
-            "nome": "Ricardo Werner",
-            "email": "teste@teste.com.br"
-        }
-    ],
-    "pharmacys": [
-        {
-            "id": 1,
-            "nome": "Drogaria Lugar Legal",
-            "endereco": "Rua dos Bobos, 0",
-            "telefone": "55+48999999999",
-            "email": "pharmacy1@teste.com.br"
-        }
-    ],
-    "products": [
-        {
-            "id": 1,
-            "nome": "Dipirona",
-            "descricao": "Dipirona 500mg",
-            "preco": 5.00,
-            "pharmacy_id": 1
-        }
-    ]
+{
+  "users": [],
+  "pharmacys": [
+    {
+      "razaosocial": "Lugar Legal",
+      "CNPJ": "11111111000111",
+      "fantasia": "lugar legal",
+      "email": "teste@teste.com.br",
+      "phone": "",
+      "celular": "999999999",
+      "logradouro": "",
+      "numero": "",
+      "bairro": "",
+      "complemento": "",
+      "localidade": "",
+      "uf": "",
+      "id": 1
+    }
+  ],
+  "products": []
 }

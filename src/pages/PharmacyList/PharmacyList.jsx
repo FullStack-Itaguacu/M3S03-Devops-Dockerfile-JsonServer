@@ -1,5 +1,6 @@
 import React, {useContext} from "react";
 import { AuthContext } from "../../contexts/auth";
+import { PharmaForm } from "../../components/PharmaForm/PharmaForm";
 
 const PharmaListPage = () => {
     //recuperar o callback do logout do contexto
@@ -12,8 +13,9 @@ const PharmaListPage = () => {
 
     return (
         <>
-            <h1>Farmácias</h1>
-            <p>{String(authenticated)}</p>
+            <h1>Cadastro de Farmácia</h1>
+            <PharmaForm />
+            <p>{/*String(authenticated)*/}</p>
             <button onClick={handleLogout}>Logout</button>
         </>
     );
