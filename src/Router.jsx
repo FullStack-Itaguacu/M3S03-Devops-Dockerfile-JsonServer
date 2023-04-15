@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import { AuthContextProvider, AuthContext } from './contexts/auth';
 import LoginPage from './pages/Login/LoginPage';
 import HomePage from './pages/Home/HomePage';
-import PharmaListPage from './pages/PharmacyList/PharmacyList';
+import PharmacyPage from './pages/Pharmacy/Pharmacy';
 import ProductsPage from './pages/Products/Products';
 
 const AppRouter = () => {
@@ -26,7 +26,7 @@ const AppRouter = () => {
                     <Route exact path="/login" element={<LoginPage />} />
                     <Route exact path="/" element={<Private><HomePage /></Private>} />
                     <Route exact path="/products" element={<Private><ProductsPage /></Private>} />
-                    <Route exact path="/pharmalist" element={<Private><PharmaListPage /></Private>} />
+                    <Route exact path="/pharmacy" element={<Private><PharmacyPage /></Private>} />
                     <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
             </AuthContextProvider>
