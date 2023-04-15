@@ -11,6 +11,7 @@ export function PharmaForm() {
     const atualizarCep = (campo, valor) => {
         const novoFormulario = { ...formulario, [campo]: valor };
         setFormulario(novoFormulario);
+        console.log(novoFormulario);
     };
 
     const buscarCep = () => {
@@ -21,6 +22,7 @@ export function PharmaForm() {
         fetch(`https://viacep.com.br/ws/${formulario.cep}/json/`)
         .then((response) => response.json())
         .then((data) => setEndereco(data));
+        console.log(endereco);
 };
 
     const onSubmit = (data) => {
