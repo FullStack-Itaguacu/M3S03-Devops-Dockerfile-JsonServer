@@ -2,7 +2,16 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function AddMedicamentos() {
-    const [medicamentos, setMedicamentos] = useState([]);
+    const [medicamentos, setMedicamentos] = useState([]); // Inicializa como um array vazio
+    const [medicamento, setMedicamento ] = useState({
+        medicamentos: "",
+        laboratorio: "",
+        dosagem: "",
+        preco: "",
+        tipo: "",
+        descricao: "",
+
+});
 
     useEffect(() => {
         const getMedicamentos = async () => {
@@ -23,8 +32,7 @@ function AddMedicamentos() {
 
         try {
             const response = await axios.post('http://localhost:5000/products', {
-                nome,
-                dosagem,
+                medicamentos,
             });
 
             setMedicamentos([...medicamentos, response.data]);

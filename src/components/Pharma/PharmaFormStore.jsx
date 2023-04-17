@@ -3,10 +3,10 @@ import { useForm } from "react-hook-form";
 import "./PharmaFormStore.css";
 
 export function PharmaFormStore() {
-    const { register, formState: { errors }, handleSubmit } = useForm();
-    const [ endereco, setEndereco ] = useState();
-    const [ formulario, setFormulario ] = useState({
-        cep: '',        
+    const { register, formState: { errors }, handleSubmit, setValue } = useForm();
+    const [endereco, setEndereco] = useState();
+    const [formulario, setFormulario] = useState({
+        cep: '',
     });
 
     const atualizarCep = (campo, valor) => {
@@ -16,16 +16,23 @@ export function PharmaFormStore() {
     };
 
     const buscarCep = () => {
-        if(formulario.cep.length !== 8) {
+        if (formulario.cep.length !== 8) {
             alert('CEP inválido');
             return;
         }
         fetch(`https://viacep.com.br/ws/${formulario.cep}/json/`)
-        .then((response) => response.json())
-        .then((data) => 
-            setEndereco(data));
-            console.log(endereco);
-};
+            .then((response) => response.json())
+            .then((endereco) =>
+                setEndereco(endereco));
+                setValue('logradouro', endereco.logradouro);
+                setValue('unidade', endereco.unidade);
+                setValue('bairro', endereco.bairro);
+                setValue('complemento', endereco.complemento);
+                setValue('localidade', endereco.localidade);
+                setValue('uf', endereco.uf);
+
+        console.log(endereco);
+    };
 
     const onSubmit = (pharmadata) => {
         /*fetch('http://localhost:5000/pharmacys', {
@@ -71,35 +78,35 @@ export function PharmaFormStore() {
                     <label>E-mail</label>
                     <input
                         {...register("email", { required: "email Obrigatório" })}
-                        aria-invalid={errors.email? "true" : "false"}
+                        aria-invalid={errors.email ? "true" : "false"}
                     />
                     {errors.email && <p role="alert">{errors.email?.message}</p>}
 
                     <label>Telefone</label>
                     <input
                         {...register("phone")}
-                        aria-invalid={errors.email? "true" : "false"}
+                        aria-invalid={errors.email ? "true" : "false"}
                     />
                     <label>Celular</label>
                     <input
                         {...register("celular", { required: "Celular Obrigatório" })}
-                        aria-invalid={errors.celular? "true" : "false"}
+                        aria-invalid={errors.celular ? "true" : "false"}
                     />
                     {errors.celular && <p role="alert">{errors.celular?.message}</p>}
                 </div>
             </fieldset>
 
             <fieldset className="form-campo">
-                <div className="form-control-container">   
+                <div className="form-control-container">
                     <p>Endereço</p>
-                        {/*<p>{ `CEP: ${formulario.cep}` }</p>*/}
-                    <input 
-                            type="text"
-                            value={formulario.cep}
-                            onChange={(e) => atualizarCep('cep', e.target.value)}
+                    {/*<p>{ `CEP: ${formulario.cep}` }</p>*/}
+                    <input
+                        type="text"
+                        value={formulario.cep}
+                        onChange={(e) => atualizarCep('cep', e.target.value)}
                     />
                     <div>
-                        <button type="button" onClick={buscarCep}>Buscar CEP</button>  
+                        <button type="button" onClick={buscarCep}>Buscar CEP</button>
                     </div>
                     <div className="form-campo">
                         <label>Endereço</label>
@@ -107,18 +114,18 @@ export function PharmaFormStore() {
                         <label>Número</label>
                         <input type="text" value={endereco?.numero} {...register("numero")} />
                         <label>Bairro</label>
-                        <input type="text" value={endereco?.bairro} {...register("bairro")} readOnly/>
+                        <input type="text" value={endereco?.bairro} {...register("bairro")} readOnly />
                         <label>Complemento</label>
                         <input type="text" value={endereco?.complemento} {...register("complemento")} readOnly />
                         <label>Cidade</label>
                         <input type="text" value={endereco?.localidade} {...register("localidade")} readOnly />
-                        <label>Estado</label>         
+                        <label>Estado</label>
                         <input type="text" value={endereco?.uf} {...register("uf")} readOnly />
                     </div>
                 </div>
             </fieldset>
-                <input type="submit" value="Enviar"/>
-           
+            <input type="submit" value="Enviar" />
+
         </form>
     );
 }

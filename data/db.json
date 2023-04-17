@@ -1,50 +1,5 @@
 {
-  "users": [
-    {
-      "email": "teste@teste.com.br",
-      "password": "123456789",
-      "confirmPassword": "123456789",
-      "id": 1
-    },
-    {
-      "email": "teste@teste.com.br",
-      "password": "123456789",
-      "confirmPassword": "123456789",
-      "id": 2
-    },
-    {
-      "email": "teste@teste.com.br",
-      "password": "123456789",
-      "confirmPassword": "123456789",
-      "id": 3
-    },
-    {
-      "email": "teste@teste.com.br",
-      "password": "123456789",
-      "confirmPassword": "123456789",
-      "id": 4
-    },
-    {
-      "email": "teste@teste.com.br",
-      "password": "0987654321",
-      "confirmPassword": "0987654321",
-      "id": 5
-    }
-  ],
+  "users": [],
   "pharmacys": [],
-  "products": [
-    {
-      "id": 1,
-      "name": "Paracetamol",
-      "price": 10,
-      "quantity": 100,
-      "description": "Paracetamol is a pain reliever and a fever reducer. It is used to treat many conditions such as headache, muscle aches, arthritis, backache, toothaches, colds, and fevers.",
-      "image": "caixa-sem-imagem.jpg"
-    },
-    {
-      "nome": "",
-      "dosagem": "",
-      "id": 2
-    }
-  ]
+  "products": []
 }
