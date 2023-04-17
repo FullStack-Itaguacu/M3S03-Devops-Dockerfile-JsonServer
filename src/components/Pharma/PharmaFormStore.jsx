@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import "./PharmaFormStore.css";
+/*import "./PharmaFormStore.css";*/
 
 export function PharmaFormStore() {
     const { register, formState: { errors }, handleSubmit, setValue } = useForm();

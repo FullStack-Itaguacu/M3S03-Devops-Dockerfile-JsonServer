@@ -1,8 +1,8 @@
 import React, {useContext} from "react";
 import { AuthContext } from "../../contexts/auth";
-import PharmaFormMed from "../../components/Pharma/PharmaFormMed";
+import { PharmaFormStore } from "../../components/Pharma/PharmaFormStore";
 
-const AddMedicationPage = () => {
+const AddPharmacyStorePage = () => {
     //recuperar o callback do logout do contexto
     const { authenticated, logout} = useContext(AuthContext);
     
@@ -14,11 +14,11 @@ const AddMedicationPage = () => {
     return (
         <>
             <h1>Registros</h1>
-            <PharmaFormMed />
+            <PharmaFormStore />
             {/*<p>{String(authenticated)}</p>*/}
             <button onClick={handleLogout}>Logout</button>
         </>
     );
 }
 
-export default AddMedicationPage;
+export default AddPharmacyStorePage;
