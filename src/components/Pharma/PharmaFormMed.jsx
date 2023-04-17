@@ -36,8 +36,7 @@ function AddMedicamentos() {
             });
 
             setMedicamentos([...medicamentos, response.data]);
-            setNome('');
-            setDosagem('');
+            console.log(setMedicamentos)
         } catch (error) {
             console.error(error);
         }

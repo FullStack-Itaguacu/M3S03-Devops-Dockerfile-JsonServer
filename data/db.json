@@ -1,5 +1,128 @@
 {
   "users": [],
-  "pharmacys": [],
-  "products": []
+  "pharmacys": [
+    {
+      "razaosocial": "Lugar Legal",
+      "CNPJ": "11111111000111",
+      "fantasia": "lugar legal",
+      "email": "teste@teste.com.br",
+      "phone": "",
+      "celular": "999999999",
+      "logradouro": "Rua Camatiá",
+      "numero": "51",
+      "bairro": "Vila Romana",
+      "complemento": "",
+      "localidade": "São Paulo",
+      "uf": "SP",
+      "id": 1
+    },
+    {
+      "razaosocial": "Lugar Legal",
+      "CNPJ": "11111111000111",
+      "fantasia": "lugar legal",
+      "email": "teste@teste.com.br",
+      "phone": "",
+      "celular": "999999999",
+      "logradouro": "Rua Camatiá",
+      "numero": "",
+      "bairro": "Vila Romana",
+      "complemento": "",
+      "localidade": "São Paulo",
+      "uf": "SP",
+      "id": 2
+    },
+    {
+      "razaosocial": "Lugar Legal",
+      "CNPJ": "11111111000111",
+      "fantasia": "lugar legal",
+      "email": "teste@teste.com.br",
+      "phone": "",
+      "celular": "999999999",
+      "logradouro": "Rua Camatiá",
+      "numero": "51",
+      "bairro": "Vila Romana",
+      "complemento": "",
+      "localidade": "São Paulo",
+      "uf": "SP",
+      "id": 3
+    }
+  ],
+  "products": [
+    {
+      "medicamentos": {
+        "medicamentos": "Paracetamol",
+        "laboratorio": "Medley",
+        "dosagem": "1 x 12 horas",
+        "preco": "10,00",
+        "tipo": "Medicamento comum",
+        "descricao": "Dor de cabeça"
+      },
+      "id": 1
+    },
+    {
+      "medicamentos": {
+        "0": {
+          "medicamentos": {
+            "medicamentos": "Paracetamol",
+            "laboratorio": "Medley",
+            "dosagem": "1 x 12 horas",
+            "preco": "10,00",
+            "tipo": "Medicamento comum",
+            "descricao": "Dor de cabeça"
+          },
+          "id": 1
+        },
+        "medicamentos": "Paracetamol",
+        "laboratorio": "Medley",
+        "dosagem": "1 x 12 horas",
+        "preco": "10,00",
+        "tipo": "Medicamento comum",
+        "descricao": "Dor de Cabeça"
+      },
+      "id": 2
+    },
+    {
+      "medicamentos": {
+        "0": {
+          "medicamentos": {
+            "medicamentos": "Paracetamol",
+            "laboratorio": "Medley",
+            "dosagem": "1 x 12 horas",
+            "preco": "10,00",
+            "tipo": "Medicamento comum",
+            "descricao": "Dor de cabeça"
+          },
+          "id": 1
+        },
+        "1": {
+          "medicamentos": {
+            "0": {
+              "medicamentos": {
+                "medicamentos": "Paracetamol",
+                "laboratorio": "Medley",
+                "dosagem": "1 x 12 horas",
+                "preco": "10,00",
+                "tipo": "Medicamento comum",
+                "descricao": "Dor de cabeça"
+              },
+              "id": 1
+            },
+            "medicamentos": "Paracetamol",
+            "laboratorio": "Medley",
+            "dosagem": "1 x 12 horas",
+            "preco": "10,00",
+            "tipo": "Medicamento comum",
+            "descricao": "Dor de Cabeça"
+          },
+          "id": 2
+        },
+        "medicamentos": "Paracetamol",
+        "laboratorio": "Medley",
+        "dosagem": "1 x 12 horas",
+        "preco": "10,00",
+        "descricao": "Dor de Cabeça"
+      },
+      "id": 3
+    }
+  ]
 }

@@ -22,26 +22,28 @@ export function PharmaFormStore() {
         }
         fetch(`https://viacep.com.br/ws/${formulario.cep}/json/`)
             .then((response) => response.json())
-            .then((endereco) =>
-                setEndereco(endereco));
-                setValue('logradouro', endereco.logradouro);
-                setValue('unidade', endereco.unidade);
-                setValue('bairro', endereco.bairro);
-                setValue('complemento', endereco.complemento);
-                setValue('localidade', endereco.localidade);
-                setValue('uf', endereco.uf);
+            .then((data) => {
+                setEndereco(data)
 
-        console.log(endereco);
+                setValue('logradouro', data.logradouro);
+                setValue('unidade', data.unidade);
+                setValue('bairro', data.bairro);
+                setValue('complemento', data.complemento);
+                setValue('localidade', data.localidade);
+                setValue('uf', data.uf);
+
+        console.log(data);
+    });
     };
 
     const onSubmit = (pharmadata) => {
-        /*fetch('http://localhost:5000/pharmacys', {
+        fetch('http://localhost:5000/pharmacys', {
             method: 'POST',
             body: JSON.stringify(pharmadata),
             headers: {
                 'Content-Type': 'application/json',
             },
-        });*/
+        });
         console.log(pharmadata);
     };
 
