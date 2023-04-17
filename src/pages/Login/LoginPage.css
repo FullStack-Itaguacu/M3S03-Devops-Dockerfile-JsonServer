@@ -6,9 +6,17 @@
     background-color: #f5f5f5;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin: 20px auto;
-    padding: 20px;
+    margin: 15px auto;
+    padding: 2px;
     width: 300px;
+}
+
+#login form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
 }
 
 #login .form-group {
@@ -17,7 +25,6 @@
 
 #login .form-group label {
     display: block;
-    margin-bottom: 5px;
 }
 
 #login .form-group input {

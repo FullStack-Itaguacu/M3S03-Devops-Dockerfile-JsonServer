@@ -29,6 +29,7 @@ const AppRouter = () => {
         <Router>
             <AuthContextProvider>
                 <Routes>
+                    <Route exact path="/" element={<LoginPage />} />
                     <Route exact path="/login" element={<LoginPage />} />
                     <Route exact path="/adduser" element={<AddUser />} />
                     <Route exact path="/pharmacy" element={<Private><PharmacyPage /></Private>} />

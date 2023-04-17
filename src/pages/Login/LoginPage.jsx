@@ -20,7 +20,7 @@ const LoginPage = () => {
     return (
         <div id="login">
         <h1 className="titulo">Inicial Login</h1>
-        <p>{String(authenticated)}</p>
+        {/*<p>{String(authenticated)}</p>*/}
         <form className="form" onSubmit={handleSubmit}>
         {/*<div className="form-group">
                 <label htmlFor="email">Nome</label>

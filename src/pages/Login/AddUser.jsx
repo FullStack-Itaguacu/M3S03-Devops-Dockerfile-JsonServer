@@ -45,14 +45,14 @@ function AddUser() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <h1>Cadastro de novo Usuário</h1>
+    <form  className="form-container"  onSubmit={handleSubmit(onSubmit)}>
+      <h1>Cadastro de Novo Usuário</h1>
       {/*<label>
         Nome
         <input type="text" {...register("name", { required: true })} />
         <span>{errors.name?.message}</span>
       </label>*/}
-      <fieldset>
+      <fieldset className="field-container">
         <label>
           Email
           <input type="text" {...register("email")} />

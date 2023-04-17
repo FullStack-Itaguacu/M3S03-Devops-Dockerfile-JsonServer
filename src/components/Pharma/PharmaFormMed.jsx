@@ -4,6 +4,7 @@ import axios from 'axios';
 function AddMedicamentos() {
     const [medicamentos, setMedicamentos] = useState([]); // Inicializa como um array vazio
     const [medicamento, setMedicamento ] = useState({
+        imagem: "",
         medicamentos: "",
         laboratorio: "",
         dosagem: "",
@@ -56,6 +57,7 @@ function AddMedicamentos() {
                     <label htmlFor="inputMedicamento" className="form-label">
                         Medicamento
                     </label>
+                    <img src={medicamentos.imagem} alt="Imagem do medicamento" />
                     <input
                         value={medicamentos.medicamentos || ""}
                         type="text"
