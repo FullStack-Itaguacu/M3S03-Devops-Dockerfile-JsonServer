@@ -30,3 +30,7 @@
 .header__nav-link {
     text-decoration: none;
 }
+
+.header__nav-link:hover {
+    color: #000;
+}

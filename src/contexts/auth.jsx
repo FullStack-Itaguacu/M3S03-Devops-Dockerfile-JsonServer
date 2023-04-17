@@ -34,7 +34,7 @@ export const AuthContextProvider = ({children}) => {
         // Simulando uma autenticação
         if(password === "123456789"){
             setUser(loggerUser);//com o usuario logado
-            navigate("/"); // redireciona para a pagina inicial
+            navigate("/pharmacy"); // redireciona para a pagina inicial
             } else {
             alert("Email ou Senha incorreta");
         };

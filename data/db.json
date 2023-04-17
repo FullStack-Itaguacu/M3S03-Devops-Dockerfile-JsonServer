@@ -1,66 +1,50 @@
 {
-  "users": [],
-  "pharmacys": [
+  "users": [
     {
-      "razaosocial": "Lugar Legal",
-      "CNPJ": "11111111000111",
-      "fantasia": "lugar legal",
       "email": "teste@teste.com.br",
-      "phone": "",
-      "celular": "999999999",
-      "logradouro": "",
-      "numero": "",
-      "bairro": "",
-      "complemento": "",
-      "localidade": "",
-      "uf": "",
+      "password": "123456789",
+      "confirmPassword": "123456789",
       "id": 1
     },
     {
-      "razaosocial": "Lugar Legal",
-      "CNPJ": "11111111000111",
-      "fantasia": "lugar legal",
       "email": "teste@teste.com.br",
-      "phone": "",
-      "celular": "999999999",
-      "logradouro": "",
-      "numero": "",
-      "bairro": "",
-      "complemento": "",
-      "localidade": "",
-      "uf": "",
+      "password": "123456789",
+      "confirmPassword": "123456789",
       "id": 2
     },
     {
-      "razaosocial": "Lugar Legal",
-      "CNPJ": "11111111000111",
-      "fantasia": "lugar legal",
       "email": "teste@teste.com.br",
-      "phone": "",
-      "celular": "999999999",
-      "logradouro": "",
-      "numero": "",
-      "bairro": "",
-      "complemento": "",
-      "localidade": "",
-      "uf": "",
+      "password": "123456789",
+      "confirmPassword": "123456789",
       "id": 3
     },
     {
-      "razaosocial": "Lugar Legal",
-      "CNPJ": "11111111000111",
-      "fantasia": "lugar legal",
       "email": "teste@teste.com.br",
-      "phone": "",
-      "celular": "999999999",
-      "logradouro": "",
-      "numero": "",
-      "bairro": "",
-      "complemento": "",
-      "localidade": "",
-      "uf": "",
+      "password": "123456789",
+      "confirmPassword": "123456789",
       "id": 4
+    },
+    {
+      "email": "teste@teste.com.br",
+      "password": "0987654321",
+      "confirmPassword": "0987654321",
+      "id": 5
     }
   ],
-  "products": []
+  "pharmacys": [],
+  "products": [
+    {
+      "id": 1,
+      "name": "Paracetamol",
+      "price": 10,
+      "quantity": 100,
+      "description": "Paracetamol is a pain reliever and a fever reducer. It is used to treat many conditions such as headache, muscle aches, arthritis, backache, toothaches, colds, and fevers.",
+      "image": "caixa-sem-imagem.jpg"
+    },
+    {
+      "nome": "",
+      "dosagem": "",
+      "id": 2
+    }
+  ]
 }

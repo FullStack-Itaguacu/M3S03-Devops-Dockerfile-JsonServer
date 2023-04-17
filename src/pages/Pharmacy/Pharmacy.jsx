@@ -1,11 +1,10 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { AuthContext } from "../../contexts/auth";
-import { PharmaForm } from "../../components/Pharma/PharmaForm";
 
 const PharmacyPage = () => {
     //recuperar o callback do logout do contexto
-    const { authenticated, logout} = useContext(AuthContext);
-    
+    const { authenticated, logout } = useContext(AuthContext);
+
     // chamo o logout na função abaixo
     const handleLogout = () => {
         logout();
@@ -13,10 +12,10 @@ const PharmacyPage = () => {
 
     return (
         <>
-            <h1>Cadastro de Farmácia</h1>
-            <PharmaForm />
-            <p>{/*String(authenticated)*/}</p>
-            <button onClick={handleLogout}>Logout</button>
+            <h1>Lista de Farmácias</h1>
+            
+            {/*<p>{String(authenticated)}</p>*/}
+            <button className="btn-logout" onClick={handleLogout}>Logout</button>
         </>
     );
 }

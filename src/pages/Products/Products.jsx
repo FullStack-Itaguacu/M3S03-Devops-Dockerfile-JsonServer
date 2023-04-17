@@ -14,6 +14,7 @@ const ProductsPage = () => {
         <>
             <h1>Medicamentos</h1>
             <p>{String(authenticated)}</p>
+            {/*<ProductGrid />*/}
             <button onClick={handleLogout}>Logout</button>
         </>
     );

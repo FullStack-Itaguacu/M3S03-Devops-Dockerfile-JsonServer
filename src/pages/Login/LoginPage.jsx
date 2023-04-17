@@ -4,7 +4,7 @@ import "./LoginPage.css";
 
 const LoginPage = () => {
     const {authenticated, login} = useContext(AuthContext);
-
+    const [nome, setNome] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -22,6 +22,19 @@ const LoginPage = () => {
         <h1 className="titulo">Inicial Login</h1>
         <p>{String(authenticated)}</p>
         <form className="form" onSubmit={handleSubmit}>
+        {/*<div className="form-group">
+                <label htmlFor="email">Nome</label>
+                <input 
+                type="text" 
+                name="nome" 
+                placeholder="Digite seu nome de usuário..." 
+                required
+                value={nome}
+                onChange={(e) => setNome(e.target.value)}
+                />
+    </div>*/}
+
+
             <div className="form-group">
                 <label htmlFor="email">Email</label>
                 <input 
@@ -53,7 +66,7 @@ const LoginPage = () => {
                 <button type="submit" className="btn-form-group">Entrar</button>
             </div>
             <p className="p-form">
-                <a href="#">Não tem conta? crie agora..</a>
+                <a href="/adduser">Não tem conta? crie agora..</a>
             </p>
         </form>      
         </div>
