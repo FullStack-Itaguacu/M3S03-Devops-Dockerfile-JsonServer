@@ -65,5 +65,33 @@
   "imagem": {
     "imagem": "caixa-sem-imagem.jpg"
   },
-  "medications": []
+  "medications": [
+    {
+      "medicamentos": "Paracetamol",
+      "laboratorio": "Medley",
+      "dosagem": "1 x 12 horas",
+      "preco": "10,00",
+      "tipo": "Medicamento comum",
+      "descricao": "Dor de Cabeça",
+      "id": 1
+    },
+    {
+      "medicamentos": "Paracetamol",
+      "laboratorio": "EMS",
+      "dosagem": "1 x 12 horas",
+      "preco": "10,00",
+      "tipo": "Medicamento comum",
+      "descricao": "Dor e enxaqueca",
+      "id": 2
+    },
+    {
+      "medicamentos": "Paracetamol",
+      "laboratorio": "Medley",
+      "dosagem": "1 x 12 horas",
+      "preco": "10,00",
+      "tipo": "Medicamento controlado",
+      "descricao": "Dores em geral",
+      "id": 3
+    }
+  ]
 }

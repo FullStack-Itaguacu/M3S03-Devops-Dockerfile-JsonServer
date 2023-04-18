@@ -6,7 +6,6 @@ import AddUser from './pages/Login/AddUser';
 import PharmacyPage from './pages/Pharmacy/Pharmacy';
 import { PharmaList } from './pages/Pharmacy/PharmaList';
 import MedicationPage from './pages/Medication/Medication';
-{/*import { MedicationList } from './pages/Medication/MedicationList';*/}
 import RegisterPage from './pages/Register/Register';
 import AddPharmacy from './pages/Pharmacy/AddPharmacy';
 import AddMedicationPage from './pages/Medication/AddMedication';

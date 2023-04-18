@@ -5,7 +5,7 @@ function AddMedicamentos() {
     {/*const [medicamentos, setMedicamentos] = useState([]);*/} // Inicializa como um array vazio
     const [medicamentos, setMedicamentos] = useState({
         imagem: "",
-        medicamentos: "",
+        medicamento: "",
         laboratorio: "",
         dosagem: "",
         preco: "",
@@ -18,8 +18,8 @@ function AddMedicamentos() {
         const getMedicamentos = async () => {
             try {
                 const response = await axios.get('http://localhost:5000/medications');
-                setMedicamentos(response.data);
-                localStorage.setItem('medicamentos', JSON.stringify(response.data));
+                setMedicamentos(medicamentos, response.data)
+            {/*localStorage.setItem('medicamentos', JSON.stringify(response.data));*/}
             } catch (error) {
                 console.error(error);
             }
@@ -32,11 +32,9 @@ function AddMedicamentos() {
         event.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:5000/medications', {
-                medicamentos,
-            });
+            const response = await axios.post('http://localhost:5000/medications', medicamentos);
 
-            setMedicamentos([...medicamentos, response.data]);
+            setMedicamentos([medicamentos, response.data]);
             console.log(setMedicamentos)
         } catch (error) {
             console.error(error);
