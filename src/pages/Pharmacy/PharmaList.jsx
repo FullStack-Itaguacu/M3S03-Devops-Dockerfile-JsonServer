@@ -1,47 +1,73 @@
-import React, { useState, useEffect} from "react";
+import React, { Component } from "react";
 
+export class PharmaList extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            data: [],
+        };
+    }
 
-export const PharmaList = () => {
-    const [pharmaList, setPharmaList] = useState([]);
+    componentDidMount() {
+        this.apiPharmaList();
+    }
 
-    useEffect(() => {
-        fetch("http://localhost:5000/pharmacys" , {
-            method: "GET", 
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json",
-            }
-        }).then((response) => response.json())
-            .then((data) => {
-                setPharmaList(data);
-            },[]);
-            console.log(pharmaList);
-    }); 
+    async apiPharmaList() {
+        const res = await fetch("http://localhost:5000/pharmacys");
+        const res_1 = await res.json();
+        return this.setState({
+            data: res_1,
+        });
+    }
 
-    const getData = () => {
-        fetch("http://localhost:5000/pharmacys" , {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json",
-            }
-        }).then((function(response) {
-            console.log(response);
-            return response.json();
-        }).then(function(myJson) {
-            console.log(myJson);
-        }));
-    };
+    renderPharmaList() {
+        return this.state.data.map((pharma) => {
+            return (
+                <tr key={pharma.id}>
+                    <td>{pharma.id}</td>
+                    <td>{pharma.razaosocial}</td>
+                    <td>{pharma.CNPJ}</td>
+                    <td>{pharma.fantasia}</td>
+                    <td>{pharma.email}</td>
+                    <td>{pharma.phone}</td>
+                    <td>{pharma.celular}</td>
+                    <td>{pharma.logradouro}</td>
+                    <td>{pharma.numero}</td>
+                    <td>{pharma.bairro}</td>
+                    <td>{pharma.complemento}</td>
+                    <td>{pharma.localidade}</td>
+                    <td>{pharma.uf}</td>
+                </tr>
+            );
+        }
+        );
+    }
 
-    useEffect(() => {
-        getData();
-    }, []);
+    render() {
 
-    return (
-        <div className="list">
-            <h1>Pharma List</h1>
-            {pharmaList && pharmaList.length && pharmaList.map((pharma) =><p>{ item.about }</p>)}
-        </div>
-    );
+        return (
+            <table className="table table-striped" aria-labelledby="tabelLabel">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Razão Social</th>
+                        <th>CNPJ</th>
+                        <th>Nome Fantasia</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                        <th>Celular</th>
+                        <th>Logradouro</th>
+                        <th>Número</th>
+                        <th>Bairro</th>
+                        <th>Complemento</th>
+                        <th>Localidade</th>
+                        <th>UF</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {this.renderPharmaList()}
+                </tbody>
+            </table>
+        );
+    }
 }
-

@@ -42,7 +42,6 @@ export const AuthContextProvider = ({children}) => {
         
         
    const logout = () => {
-        debugger;
         console.log("logout");
         localStorage.removeItem("user"); // remove o usuario do localstorage
         setUser(null); // remove o usuario do estado

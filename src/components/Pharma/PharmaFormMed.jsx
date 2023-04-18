@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function AddMedicamentos() {
-    const [medicamentos, setMedicamentos] = useState([]); // Inicializa como um array vazio
-    const [medicamento, setMedicamento ] = useState({
+    {/*const [medicamentos, setMedicamentos] = useState([]);*/} // Inicializa como um array vazio
+    const [medicamentos, setMedicamentos] = useState({
         imagem: "",
         medicamentos: "",
         laboratorio: "",
@@ -12,12 +12,12 @@ function AddMedicamentos() {
         tipo: "",
         descricao: "",
 
-});
+    });
 
     useEffect(() => {
         const getMedicamentos = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/products');
+                const response = await axios.get('http://localhost:5000/medications');
                 setMedicamentos(response.data);
                 localStorage.setItem('medicamentos', JSON.stringify(response.data));
             } catch (error) {
@@ -32,7 +32,7 @@ function AddMedicamentos() {
         event.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:5000/products', {
+            const response = await axios.post('http://localhost:5000/medications', {
                 medicamentos,
             });
 
@@ -45,13 +45,12 @@ function AddMedicamentos() {
 
     return (
         <div>
-            <h1>Lista de Medicamentos</h1>
             {/*<ul>
                 {medicamentos.map((medicamentos) => (
                     <li key={medicamentos.id}>{medicamentos.nome}</li>
                 ))}
                 </ul>*/}
-            <h2>Cadastrar Novo Medicamento</h2>
+            <h1>Cadastrar Novo Medicamento</h1>
             <form onSubmit={handleSubmit}>
                 <fieldset className="col-md-6">
                     <label htmlFor="inputMedicamento" className="form-label">

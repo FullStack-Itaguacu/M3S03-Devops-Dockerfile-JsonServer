@@ -1,5 +1,6 @@
 import React, {useContext} from "react";
 import { AuthContext } from "../../contexts/auth";
+import { CardGrid } from "../../components/Card/CardGrid";
 
 const MedicationPage = () => {
     //recuperar o callback do logout do contexto
@@ -13,8 +14,8 @@ const MedicationPage = () => {
     return (
         <>
             <h1>Lista de Medicamentos</h1>
-            <p>{String(authenticated)}</p>
-            {/*<ProductGrid />*/}
+            {/*<p>{String(authenticated)}</p>*/}
+            <CardGrid />
             <button onClick={handleLogout}>Logout</button>
         </>
     );
