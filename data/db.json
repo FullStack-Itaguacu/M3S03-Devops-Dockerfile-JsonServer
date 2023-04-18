@@ -92,6 +92,17 @@
       "tipo": "Medicamento controlado",
       "descricao": "Dores em geral",
       "id": 3
+    },
+    {
+      "imagem": "",
+      "medicamento": "",
+      "laboratorio": "Cimed",
+      "dosagem": "1 x 12 horas",
+      "preco": "10,00",
+      "tipo": "Medicamento comum",
+      "descricao": "Dores pelo corpo",
+      "medicamentos": "Paracetamol",
+      "id": 4
     }
   ]
 }
