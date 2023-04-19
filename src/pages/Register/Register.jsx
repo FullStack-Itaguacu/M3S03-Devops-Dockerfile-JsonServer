@@ -13,10 +13,10 @@ const RegisterPage = () => {
     };
 
     return (
-        <div className="container">
-            <div className="link-container">
+        <div className="RegisterContainer">
+            <div className="RegisterLink">
                 <h1>Registro de Farmácias e Medicamentos</h1>
-                <nav className="nav-link">
+                <nav className="RegisterNavLink">
                 <Link to="/addstore"><button>Registro de Farmácias</button></Link>
                 <Link to="/addmedication"><button>Registro de Medicamentos</button></Link>
                 </nav>
@@ -24,7 +24,7 @@ const RegisterPage = () => {
         
 
             {/*<p>{String(authenticated)}</p>*/}
-            <button className="btn-logout" onClick={handleLogout}>Logout</button>
+            <button className="register-btn-logout" onClick={handleLogout}>Logout</button>
         </div>
     );
 }

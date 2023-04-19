@@ -18,10 +18,10 @@ const LoginPage = () => {
 
 
     return (
-        <div id="login">
-        <h1 className="titulo">Inicial Login</h1>
+        <div id="login-container">
+        <h1 className="login-titulo">Inicial Login</h1>
         {/*<p>{String(authenticated)}</p>*/}
-        <form className="form" onSubmit={handleSubmit}>
+        <form className="login-form" onSubmit={handleSubmit}>
         {/*<div className="form-group">
                 <label htmlFor="email">Nome</label>
                 <input 
@@ -34,8 +34,7 @@ const LoginPage = () => {
                 />
     </div>*/}
 
-
-            <div className="form-group">
+            <div className="login-form-group">
                 <label htmlFor="email">Email</label>
                 <input 
                 type="email" 
@@ -46,7 +45,7 @@ const LoginPage = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 />
             </div> 
-            <div className="form-group">
+            <div className="login-form-group">
                 <label htmlFor="password">Senha</label>
                 <input 
                 type="password" 
@@ -58,12 +57,12 @@ const LoginPage = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 />
             </div>
-            <p className="p-form">Senha com no mínimo 8 caracteres e números</p> 
-            <p className="p-form">
+            <p className="login-p-form">Senha com no mínimo 8 caracteres e números</p> 
+            <p className="login-p-form">
                 <a href="#">Esqueceu sua senha?</a>
             </p>
             <div className="btn-form-group">
-                <button type="submit" className="btn-form-group">Entrar</button>
+                <button type="submit" className="login-btn-form-group">Entrar</button>
             </div>
             <p className="p-form">
                 <a href="/adduser">Não tem conta? crie agora..</a>

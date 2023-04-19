@@ -6,38 +6,3 @@
     background-color: #f2f2f2;
     padding: 20px;
 }
-.form-campo{
-    display: block;
-    flex-direction: column;
-    margin: 10px;
-    border-radius: 5px;
-    background-color: #f2f2f2;
-}
-
-.form-control {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 4px;
-    background-color: #f2f2f2;
-}
-
-.form-control.copyright {
-    display: block;
-    font-size: 25px;
-    font-weight: bold;
-    color: #000;
-}
-
-.form-control, label {
-    font-size: 15px;
-    font-weight: bold;
-    color: #000;
-    padding: 0 10px;
-}
-
-.form-control, input {
-    font-size: 15px;
-    font-weight: bold;
-    color: #000;
-}

@@ -45,35 +45,37 @@ function AddUser() {
   };
 
   return (
-    <form  className="form-container"  onSubmit={handleSubmit(onSubmit)}>
+    <form  className="add-form-container"  onSubmit={handleSubmit(onSubmit)}>
       <h1>Cadastro de Novo Usuário</h1>
       {/*<label>
         Nome
         <input type="text" {...register("name", { required: true })} />
         <span>{errors.name?.message}</span>
       </label>*/}
-      <fieldset className="field-container">
-        <label>
-          Email
-          <input type="text" {...register("email")} />
-          <span>{errors.email?.message}</span>
-        </label>
+      <div>
+        <fieldset className="add-field-container">
+          <label>
+            Email
+            <input type="text" {...register("email")} />
+            <span>{errors.email?.message}</span>
+          </label>
 
-        <label>
-          Senha
-          <input type="password" {...register("password")} />
-          <span>{errors.password?.message}</span>
-        </label>
+          <label>
+            Senha
+            <input type="password" {...register("password")} />
+            <span>{errors.password?.message}</span>
+          </label>
 
-        <label>
-          Confirmar Senha
-          <input type="password" {...register("confirmPassword")} />
-          <span>{errors.confirmPassword?.message}</span>
-        </label>
-      </fieldset>
-
-      <button className="btn-add-user" type="submit">Cadastrar-se</button>
+          <label>
+            Confirmar Senha
+            <input type="password" {...register("confirmPassword")} />
+            <span>{errors.confirmPassword?.message}</span>
+          </label>
+        </fieldset>
+          <button className="btn-add-user" type="submit">Cadastrar-se</button>
+      </div>
     </form>
+
   );
 }
 

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function AddMedicamentos() {
-    {/*const [medicamentos, setMedicamentos] = useState([]);*/} // Inicializa como um array vazio
     const [medicamentos, setMedicamentos] = useState({
         imagem: "",
         medicamentos: "",
@@ -43,12 +42,8 @@ function AddMedicamentos() {
 
     return (
         <div>
-            <ul>
-                {medicamentos.map((medicamentos) => (
-                    <li key={medicamentos.id}>{medicamentos.nome}</li>
-                ))}
-                </ul>
             <h1>Cadastrar Novo Medicamento</h1>
+                   
             <form onSubmit={handleSubmit}>
                 <fieldset className="col-md-6">
                     <label htmlFor="inputMedicamento" className="form-label">
@@ -175,11 +170,7 @@ function AddMedicamentos() {
                 </div>
             </form>
         </div>
-
-
-
     );
 }
 
 export default AddMedicamentos;
-

@@ -1,4 +1,4 @@
-.footer-container {
+.footerContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -6,9 +6,7 @@
   background-color: #fff;
   color: #000;
   font-size: 12px;
-  border-top: 1px solid #eaeaea;
-}
-
-.footer-logo {
-  margin: 10px 0;
+  border-top: 1px solid #8d77ec;
+  height: 150px;
+  padding: 0 20px;
 }
