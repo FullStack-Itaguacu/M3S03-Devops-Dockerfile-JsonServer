@@ -41,10 +41,11 @@ export function PharmaFormStore() {
             method: 'POST',
             body: JSON.stringify(pharmadata),
             headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': 'application/json; charset=UTF-8',
             },
-        });
-        console.log(pharmadata);
+        })
+        .then(() => console.log(pharmadata))
+        .catch((err) => console.log(err));
     };
 
 

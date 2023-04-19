@@ -5,7 +5,7 @@ function AddMedicamentos() {
     {/*const [medicamentos, setMedicamentos] = useState([]);*/} // Inicializa como um array vazio
     const [medicamentos, setMedicamentos] = useState({
         imagem: "",
-        medicamento: "",
+        medicamentos: "",
         laboratorio: "",
         dosagem: "",
         preco: "",
@@ -43,11 +43,11 @@ function AddMedicamentos() {
 
     return (
         <div>
-            {/*<ul>
+            <ul>
                 {medicamentos.map((medicamentos) => (
                     <li key={medicamentos.id}>{medicamentos.nome}</li>
                 ))}
-                </ul>*/}
+                </ul>
             <h1>Cadastrar Novo Medicamento</h1>
             <form onSubmit={handleSubmit}>
                 <fieldset className="col-md-6">
@@ -56,7 +56,7 @@ function AddMedicamentos() {
                     </label>
                     <img src={medicamentos.imagem} alt="Imagem do medicamento" />
                     <input
-                        value={medicamentos.medicamentos || ""}
+                        value={medicamentos.medicamentos}
                         type="text"
                         className="form-control"
                         id="inputMedicamento"
