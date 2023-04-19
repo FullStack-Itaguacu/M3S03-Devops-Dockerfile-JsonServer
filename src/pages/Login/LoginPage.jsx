@@ -19,56 +19,59 @@ const LoginPage = () => {
 
     return (
         <div id="login-container">
-        <h1 className="login-titulo">Inicial Login</h1>
-        {/*<p>{String(authenticated)}</p>*/}
-        <form className="login-form" onSubmit={handleSubmit}>
-        {/*<div className="form-group">
-                <label htmlFor="email">Nome</label>
-                <input 
-                type="text" 
-                name="nome" 
-                placeholder="Digite seu nome de usuário..." 
-                required
-                value={nome}
-                onChange={(e) => setNome(e.target.value)}
-                />
-    </div>*/}
+            <div id="login-master">
+                <h1 className="login-titulo">Inicial Login</h1>
+                {/*<p>{String(authenticated)}</p>*/}
+            <form className="login-form" onSubmit={handleSubmit}>
+            {/*<div className="form-group">
+                    <label htmlFor="email">Nome</label>
+                    <input 
+                    type="text" 
+                    name="nome" 
+                    placeholder="Digite seu nome de usuário..." 
+                    required
+                    value={nome}
+                    onChange={(e) => setNome(e.target.value)}
+                    />
+                </div>*/}
 
-            <div className="login-form-group">
-                <label htmlFor="email">Email</label>
-                <input 
-                type="email" 
-                name="email" 
-                placeholder="Digite seu Email..." 
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                />
-            </div> 
-            <div className="login-form-group">
-                <label htmlFor="password">Senha</label>
-                <input 
-                type="password" 
-                name="password" 
-                placeholder="Digite sua senha ..." 
-                required
-                minLength={8}
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                />
+                <div className="login-form-group">
+                    <label htmlFor="email">Email</label>
+                    <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="Digite seu Email..." 
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    />
+                </div> 
+                <div className="login-form-group">
+                    <label htmlFor="password">Senha</label>
+                    <input 
+                    type="password" 
+                    name="password" 
+                    placeholder="Digite sua senha ..." 
+                    required
+                    minLength={8}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    />
+                </div>
+                <p className="login-p-form">Senha com no mínimo 8 caracteres e números</p> 
+                <p className="login-p-form">
+                    <a href="#">Esqueceu sua senha?</a>
+                </p>
+                <div className="btn-form-group">
+                    <button type="submit" className="login-btn-form-group">Entrar</button>
+                </div>
+                <p className="p-form">
+                    <a href="/adduser">Não tem conta? crie agora..</a>
+                </p>
+            </form>      
             </div>
-            <p className="login-p-form">Senha com no mínimo 8 caracteres e números</p> 
-            <p className="login-p-form">
-                <a href="#">Esqueceu sua senha?</a>
-            </p>
-            <div className="btn-form-group">
-                <button type="submit" className="login-btn-form-group">Entrar</button>
-            </div>
-            <p className="p-form">
-                <a href="/adduser">Não tem conta? crie agora..</a>
-            </p>
-        </form>      
         </div>
+
     );
 }
 

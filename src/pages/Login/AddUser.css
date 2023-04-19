@@ -1,5 +1,54 @@
-/*span {
+.add-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  margin: 15px 450px;
+}
+
+.add-field-master {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(164, 90, 250, 0.8);
+  color: #000;
+}
+
+.add-field-master label {
+  width: 300px;
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.add-field-master input {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #470380;
+  border-radius: 5px;
+}
+
+.add-field-master input:focus {
+  outline: none;
+  border-color: rgb(189, 39, 235);
+}
+
+.btn-add-user {
+  width: 300px;
+  height: 40px;
+  background-color: #470380;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.add-field-master span {
   color: red;
-  position: absolute;
-  margin-top: 60px;
-}*/
+}

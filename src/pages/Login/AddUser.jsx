@@ -53,7 +53,7 @@ function AddUser() {
         <span>{errors.name?.message}</span>
       </label>*/}
       <div>
-        <fieldset className="add-field-container">
+        <fieldset className="add-field-master">
           <label>
             Email
             <input type="text" {...register("email")} />
@@ -71,8 +71,9 @@ function AddUser() {
             <input type="password" {...register("confirmPassword")} />
             <span>{errors.confirmPassword?.message}</span>
           </label>
-        </fieldset>
           <button className="btn-add-user" type="submit">Cadastrar-se</button>
+        </fieldset>
+          
       </div>
     </form>
 
