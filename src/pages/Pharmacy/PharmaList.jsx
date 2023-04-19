@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export class PharmaList extends Component {
+class PharmaList extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -71,3 +71,5 @@ export class PharmaList extends Component {
         );
     }
 }
+
+export default PharmaList;

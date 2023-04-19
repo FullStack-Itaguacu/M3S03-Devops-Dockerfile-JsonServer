@@ -4,11 +4,12 @@ import { AuthContextProvider, AuthContext } from './contexts/auth';
 import LoginPage from './pages/Login/LoginPage';
 import AddUser from './pages/Login/AddUser';
 import PharmacyPage from './pages/Pharmacy/Pharmacy';
-import { PharmaList } from './pages/Pharmacy/PharmaList';
+import PharmaList from './pages/Pharmacy/PharmaList';
 import MedicationPage from './pages/Medication/Medication';
 import RegisterPage from './pages/Register/Register';
 import AddPharmacy from './pages/Pharmacy/AddPharmacy';
 import AddMedicationPage from './pages/Medication/AddMedication';
+//import PharmaMap from './pages/PharmaMap/PharmaMap';
 
 
 const AppRouter = () => {
@@ -37,9 +38,7 @@ const AppRouter = () => {
                     <Route exact path="/register" element={<Private><RegisterPage /></Private>} />                   
                     <Route exact path="/addmedication" element={<AddMedicationPage />} />
                     <Route exat path="/addstore" element={<AddPharmacy />} />
-                    
-                    
-                    
+                    {/*<Route exact path="/pharmamap" element={<PharmaMap />} />*/}                    
                 </Routes>
             </AuthContextProvider>
         </Router>

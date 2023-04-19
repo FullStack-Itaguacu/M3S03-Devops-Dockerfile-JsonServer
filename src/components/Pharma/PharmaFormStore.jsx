@@ -32,8 +32,8 @@ export function PharmaFormStore() {
                 setValue('localidade', data.localidade);
                 setValue('uf', data.uf);
 
-        console.log(data);
-    });
+                console.log(data);
+            });
     };
 
     const onSubmit = (pharmadata) => {
@@ -44,8 +44,8 @@ export function PharmaFormStore() {
                 'Content-Type': 'application/json; charset=UTF-8',
             },
         })
-        .then(() => console.log(pharmadata))
-        .catch((err) => console.log(err));
+            .then(() => console.log(pharmadata))
+            .catch((err) => console.log(err));
     };
 
 
@@ -64,7 +64,7 @@ export function PharmaFormStore() {
 
                     <label>CNPJ</label>
                     <input
-                        {...register("CNPJ", { required: "CNPJ Obrigatório" })}
+                        {...register(" cnpj", { required: "CNPJ Obrigatório" })}
                         aria-invalid={errors.cnpj ? "true" : "false"}
                     />
                     {errors.cnpj && <p role="alert">{errors.cnpj?.message}</p>}

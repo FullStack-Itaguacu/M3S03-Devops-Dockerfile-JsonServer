@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../contexts/auth";
-import { PharmaList} from "./PharmaList";
+import PharmaList from "./PharmaList";
 
 const PharmacyPage = () => {
     //recuperar o callback do logout do contexto
