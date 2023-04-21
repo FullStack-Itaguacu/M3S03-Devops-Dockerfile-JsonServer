@@ -46,7 +46,7 @@ function AddUser() {
 
   return (
     <form  className="add-form-container"  onSubmit={handleSubmit(onSubmit)}>
-      <h1>Cadastro de Novo Usuário</h1>
+      <h2 className="add-titulo">Cadastro de Novo Usuário</h2>
       {/*<label>
         Nome
         <input type="text" {...register("name", { required: true })} />

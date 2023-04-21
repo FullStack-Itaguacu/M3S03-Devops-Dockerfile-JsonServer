@@ -15,9 +15,7 @@ export function CardMed({
   descricao,
   excluir,
 }) {
- 
 
-  
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   return (
@@ -90,8 +88,8 @@ export function CardMed({
         <button type="button" 
         className="btn btn-danger"
         data-bs-dismiss="modal" 
-        >Excluir</button>
+        onClick={() => {excluir(medicamentos.id)}}>Excluir</button>
       </Modal>
     </div>
   );
-  }
+}

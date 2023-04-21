@@ -14,16 +14,16 @@ const RegisterPage = () => {
 
     return (
         <div className="register-container">
-            <h1>Registro de Farmácias e Medicamentos</h1>
+            <h1>Cadastro</h1>
             <div className="register-link">
                 <nav className="register-nav-link">
-                    <Link to="/addstore"><button>Registro de Farmácias</button></Link>
-                    <Link to="/addmedication"><button>Registro de Medicamentos</button></Link>
+                    <Link to="/addstore"><button>Cadastro de Farmácias</button></Link>
+                    <Link to="/addmedication"><button>Cadastro de Medicamentos</button></Link>
                 </nav>
             </div>
         
 
-            {/*<p>{String(authenticated)}</p>*/}
+    
             <button className="register-btn-logout" onClick={handleLogout}>Logout</button>
         </div>
     );

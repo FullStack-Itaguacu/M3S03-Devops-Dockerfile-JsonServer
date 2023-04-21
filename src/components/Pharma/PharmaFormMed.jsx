@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -6,6 +7,8 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
 function AddMedicamentos() {
+    const history = useNavigate();
+
     const [medicamentos, setMedicamentos] = useState({
         imagem: "",
         medicamentos: "",
@@ -43,6 +46,10 @@ function AddMedicamentos() {
             console.error(error);
         }
     };
+
+    function handleGoBack() {
+        history(-1);
+    }
 
     return (
         <div className="container">
@@ -171,9 +178,11 @@ function AddMedicamentos() {
                     <input 
                         className="btn btn-success"
                         type="submit"
-                        value="Cadastrar"
-                        
+                        value="Cadastrar"  
                     />
+                </div>
+                <div>
+                    <input type="button" value="Voltar" onClick={handleGoBack} />
                 </div>
             </form>
         </div>

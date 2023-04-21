@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 /*import "./PharmaFormStore.css";*/
 
 export function PharmaFormStore() {
+    const history = useNavigate();
     const { register, formState: { errors }, handleSubmit, setValue } = useForm();
     const [endereco, setEndereco] = useState();
     const [formulario, setFormulario] = useState({
@@ -48,7 +50,9 @@ export function PharmaFormStore() {
             .catch((err) => console.log(err));
     };
 
-
+    function handleGoBack() {
+        history(-1);
+    }
 
     return (
         <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
@@ -64,10 +68,10 @@ export function PharmaFormStore() {
 
                     <label>CNPJ</label>
                     <input
-                        {...register(" cnpj", { required: "CNPJ Obrigatório" })}
-                        aria-invalid={errors.cnpj ? "true" : "false"}
+                        {...register("CNPJ", { required: "CNPJ Obrigatório" })}
+                        aria-invalid={errors.CNPJ ? "true" : "false"}
                     />
-                    {errors.cnpj && <p role="alert">{errors.cnpj?.message}</p>}
+                    {errors.cnpj && <p role="alert">{errors.CNPJ?.message}</p>}
 
                     <label>Nome Fantasia</label>
                     <input
@@ -127,8 +131,12 @@ export function PharmaFormStore() {
                     </div>
                 </div>
             </fieldset>
-            <input type="submit" value="Enviar" />
-
+            <div>
+                <input type="submit" value="Enviar" />
+            </div>
+            <div>
+                <input type="button" value="Voltar" onClick={handleGoBack} />
+            </div>
         </form>
     );
 }
