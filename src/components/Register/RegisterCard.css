@@ -45,14 +45,33 @@
 }
 
 .register-nav-link button:hover {
-    background-color: #038041;
+    background-color: rgba(164, 90, 250, 0.8);
     color: #000;
     outline: none;
 }
 
 .register-nav-link button:active {
-    background-color: #038041;
+    background-color: rgba(164, 90, 250, 0.8);
     color: #000;
     outline: none;
     text-decoration: none;
 }
+
+.register-nav-link button:focus {
+    background-color: #032b8041;
+    color: #000;
+    outline: none;
+    text-decoration: none;
+}
+
+.register-nav-link a {
+    color: #000;
+    text-decoration: none;
+}
+
+.register-btn-logout {
+    display: flex;
+    flex-direction: initial;
+    align-items: end
+}
+

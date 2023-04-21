@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/auth";
-import "./Register.css";
+import { RegisterCard } from "../../components/Register/RegisterCard";
+
 
 const RegisterPage = () => {
     //recuperar o callback do logout do contexto
@@ -13,19 +13,11 @@ const RegisterPage = () => {
     };
 
     return (
-        <div className="register-container">
-            <h1>Cadastro</h1>
-            <div className="register-link">
-                <nav className="register-nav-link">
-                    <Link to="/addstore"><button>Cadastro de Farmácias</button></Link>
-                    <Link to="/addmedication"><button>Cadastro de Medicamentos</button></Link>
-                </nav>
-            </div>
-        
-
-    
-            <button className="register-btn-logout" onClick={handleLogout}>Logout</button>
-        </div>
+        <>
+            {/*<p>{String(authenticated)}</p>*/}
+            <RegisterCard />
+            <button className="btn-logout" onClick={handleLogout}>Logout</button>
+        </>
     );
 }
 

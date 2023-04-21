@@ -9,6 +9,7 @@ import MedicationPage from './pages/Medication/Medication';
 import RegisterPage from './pages/Register/Register';
 import AddPharmacy from './pages/Pharmacy/AddPharmacy';
 import AddMedicationPage from './pages/Medication/AddMedication';
+import Doubts from './pages/Doubts/Doubts';
 //import PharmaMap from './pages/PharmaMap/PharmaMap';
 
 
@@ -38,6 +39,7 @@ const AppRouter = () => {
                     <Route exact path="/register" element={<Private><RegisterPage /></Private>} />                   
                     <Route exact path="/addmedication" element={<AddMedicationPage />} />
                     <Route exat path="/addstore" element={<AddPharmacy />} />
+                    <Route exact path="/faq" element={<Doubts />} />
                     {/*<Route exact path="/pharmamap" element={<PharmaMap />} />*/}                    
                 </Routes>
             </AuthContextProvider>
