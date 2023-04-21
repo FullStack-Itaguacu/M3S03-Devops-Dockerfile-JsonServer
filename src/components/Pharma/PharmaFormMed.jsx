@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
 function AddMedicamentos() {
     const [medicamentos, setMedicamentos] = useState({
@@ -41,15 +45,17 @@ function AddMedicamentos() {
     };
 
     return (
-        <div>
+        <div className="container">
             <h1>Cadastrar Novo Medicamento</h1>
                    
-            <form onSubmit={handleSubmit}>
+            <form className='row justify-content-center'
+               onSubmit={handleSubmit}
+            >
                 <fieldset className="col-md-6">
-                    <label htmlFor="inputMedicamento" className="form-label">
+                    <label htmlFor="inputMedicamento" className="form-med-label">
                         Medicamento
                     </label>
-                    <img src={medicamentos.imagem} alt="Imagem do medicamento" />
+                    {/*<img src={medicamentos.imagem} alt="Imagem do medicamento" />*/}
                     <input
                         value={medicamentos.medicamentos}
                         type="text"
@@ -162,10 +168,11 @@ function AddMedicamentos() {
                             });
                         }}
                     />
-                    <input
-                        value="Cadastrar"
-                        type="submit"
+                    <input 
                         className="btn btn-success"
+                        type="submit"
+                        value="Cadastrar"
+                        
                     />
                 </div>
             </form>

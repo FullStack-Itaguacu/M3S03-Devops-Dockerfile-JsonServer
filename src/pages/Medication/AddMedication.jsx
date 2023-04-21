@@ -13,7 +13,6 @@ const AddMedicationPage = () => {
 
     return (
         <>
-            <h1>Registros</h1>
             <PharmaFormMed />
             {/*<p>{String(authenticated)}</p>*/}
             <button onClick={handleLogout}>Logout</button>

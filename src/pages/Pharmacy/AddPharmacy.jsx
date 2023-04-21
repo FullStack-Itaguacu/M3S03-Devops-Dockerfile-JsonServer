@@ -13,7 +13,6 @@ const AddPharmacyStorePage = () => {
 
     return (
         <>
-            <h1>Registros</h1>
             <PharmaFormStore />
             {/*<p>{String(authenticated)}</p>*/}
             <button onClick={handleLogout}>Logout</button>

@@ -103,6 +103,26 @@
       "descricao": "Dores pelo corpo",
       "medicamentos": "Paracetamol",
       "id": 4
+    },
+    {
+      "imagem": "",
+      "medicamentos": "para etamol",
+      "laboratorio": "axe",
+      "dosagem": "1 x 12 horas",
+      "preco": "10,00",
+      "tipo": "Medicamento controlado",
+      "descricao": "dores em geral ",
+      "id": 5
+    },
+    {
+      "imagem": "",
+      "medicamentos": "Paracetamol",
+      "laboratorio": "Cimed",
+      "dosagem": "1 x 12 horas",
+      "preco": "10,00",
+      "tipo": "Medicamento controlado",
+      "descricao": "dores",
+      "id": 6
     }
   ]
 }
