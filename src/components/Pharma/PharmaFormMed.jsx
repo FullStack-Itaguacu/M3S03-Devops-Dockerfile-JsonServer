@@ -52,14 +52,14 @@ function AddMedicamentos() {
     }
 
     return (
-        <div className="container">
-            <h1>Cadastrar Novo Medicamento</h1>
-                   
+        <div className="med-container mx-3 mt-1">
+            <h2>Cadastrar novo Medicamento</h2>
+                  
             <form className='row justify-content-center'
                onSubmit={handleSubmit}
             >
                 <fieldset className="col-md-6">
-                    <label htmlFor="inputMedicamento" className="form-med-label">
+                    <label htmlFor="inputMedicamento" className="form-med-label mt-1">
                         Medicamento
                     </label>
                     {/*<img src={medicamentos.imagem} alt="Imagem do medicamento" />*/}
