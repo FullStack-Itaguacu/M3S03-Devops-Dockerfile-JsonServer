@@ -1,8 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import "./AddUser.css";
+import "../../components/User/AddUserCard.css";
 
 const schema = yup
   .object({
@@ -43,6 +44,11 @@ function AddUser() {
     });
     console.log(userData);
   };
+  
+  const history = useNavigate();
+  function handleGoBack() {
+    history(-1);
+}
 
   return (
     <form  className="add-form-container"  onSubmit={handleSubmit(onSubmit)}>
@@ -73,7 +79,6 @@ function AddUser() {
           </label>
           <button className="btn-add-user" type="submit">Cadastrar-se</button>
         </fieldset>
-          
       </div>
     </form>
 
