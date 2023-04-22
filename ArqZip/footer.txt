@@ -1,11 +1,11 @@
-import React, {useEffect} from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import React from 'react';
 //import './Footer.css;
+import { Container, Row, Col } from 'react-bootstrap';
 
-const Footer = () => {
+export const Footer = () => {
 
 //Função para ajustar o footer conforme a altura da página
-    {/*useEffect(() => {
+    useEffect(() => {
     const pageContent = document.getElementById('page-content');
     const footer = document.querySelector('.footer');
     const windowHeight = window.innerHeight;
@@ -15,10 +15,10 @@ const Footer = () => {
     } else {
       footer.style.position = 'fixed';
     }
-  }, []);*/}
+  }, []);
 
   return (
-    <footer className="bg-light py-1">
+    <footer className="bg-light py-3">
       <Container>
         <Row>
           <Col className="text-center">
@@ -29,5 +29,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;

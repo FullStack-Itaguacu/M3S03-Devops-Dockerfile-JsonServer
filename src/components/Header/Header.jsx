@@ -27,6 +27,11 @@ const Header = () => {
                             Cadastro
                         </a>
                     </li>
+                    <li className="header__nav-item">
+                        <a href="/faq" className="header__nav-link">
+                            FAQ
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </header>
