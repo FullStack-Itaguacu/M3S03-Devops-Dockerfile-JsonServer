@@ -60,21 +60,6 @@
       "localidade": "Florianópolis",
       "uf": "SC",
       "id": 4
-    },
-    {
-      "razaosocial": "Lugar Legal",
-      "CNPJ": "11222333444455",
-      "fantasia": "lugar legal",
-      "email": "teste@teste.com.br",
-      "phone": "",
-      "celular": "888888888",
-      "logradouro": "Rua do Vasco",
-      "numero": "10",
-      "bairro": "Ingleses do Rio Vermelho",
-      "complemento": "",
-      "localidade": "Florianópolis",
-      "uf": "SC",
-      "id": 5
     }
   ],
   "imagem": {
