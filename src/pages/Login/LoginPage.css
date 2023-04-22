@@ -71,11 +71,18 @@
     color: #252424;
 }
 
+.login-p {
+    font-size: 13px;
+    font-weight: bold;
+    color: red;
+    margin-bottom: 20px;
+}
+
 .login-p-form {
     font-size: 13px;
     font-weight: bold;
-    color: #000;
-    margin-bottom: 20px;
+    color: #0d6efd;
+    margin: 20px;
 }
 
 .login-btn-form-group {

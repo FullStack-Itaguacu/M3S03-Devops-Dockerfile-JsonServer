@@ -58,14 +58,14 @@ const LoginPage = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>
-                <p className="login-p-form">Senha com no mínimo 8 caracteres e números</p> 
+                <p className="login-p">Senha com no mínimo 8 caracteres e números</p> 
                 <p className="login-p-form">
                     <a href="#">Esqueceu sua senha?</a>
                 </p>
                 <div className="btn-form-group">
                     <button type="submit" className="login-btn-form-group">Entrar</button>
                 </div>
-                <p className="p-form">
+                <p className="login-p-form">
                     <a href="/adduser">Não tem conta? crie agora..</a>
                 </p>
             </form>      

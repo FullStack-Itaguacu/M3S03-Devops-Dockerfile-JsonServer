@@ -24,6 +24,7 @@
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(164, 90, 250, 0.8);
   color: #000;
+  padding: 25px;
 }
 
 .add-field-master label {
