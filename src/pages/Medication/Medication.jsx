@@ -14,7 +14,6 @@ const MedicationPage = () => {
     return (
         <>
             <h1>Lista de Medicamentos</h1>
-            {/*<p>{String(authenticated)}</p>*/}
             <MedicationList />
             <button onClick={handleLogout}>Logout</button>
         </>

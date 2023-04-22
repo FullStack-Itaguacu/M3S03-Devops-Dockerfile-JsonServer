@@ -14,7 +14,6 @@ const RegisterPage = () => {
 
     return (
         <>
-            {/*<p>{String(authenticated)}</p>*/}
             <RegisterCard />
             <button className="btn-logout" onClick={handleLogout}>Logout</button>
         </>

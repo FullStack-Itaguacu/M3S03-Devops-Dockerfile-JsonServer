@@ -14,7 +14,6 @@ const AddPharmacyStorePage = () => {
     return (
         <>
             <PharmaFormStore />
-            {/*<p>{String(authenticated)}</p>*/}
             <button onClick={handleLogout}>Logout</button>
         </>
     );

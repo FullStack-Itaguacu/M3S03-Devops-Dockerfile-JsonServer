@@ -14,7 +14,6 @@ const PharmacyPage = () => {
     return (
         <>
             <h1>Lista de Farmácias</h1>
-            {/*<p>{String(authenticated)}</p>*/}
             <PharmaList />
             <button className="btn-logout" onClick={handleLogout}>Logout</button>
         </>

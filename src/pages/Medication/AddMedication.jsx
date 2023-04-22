@@ -14,7 +14,6 @@ const AddMedicationPage = () => {
     return (
         <>
             <PharmaFormMed />
-            {/*<p>{String(authenticated)}</p>*/}
             <button onClick={handleLogout}>Logout</button>
         </>
     );
