@@ -2,6 +2,7 @@
   "users": [],
   "pharmacys": [
     {
+      "cep": "88054-300",
       "razaosocial": "Farmácia Floripa LTDA",
       "CNPJ": "12.345.678/0001-01",
       "fantasia": "Farmácia Floripa",
@@ -14,7 +15,6 @@
       "complemento": "Sala 101",
       "localidade": "Florianópolis",
       "uf": "SC",
-      "cep": "88054-300",
       "id": 1
     },
     {
@@ -96,9 +96,41 @@
       "uf": "SC",
       "cep": "88058-080",
       "id": 6
+    },
+    {
+      "razaosocial": "O Lugar Legal",
+      "CNPJ": "12.345.670/0019-0",
+      "fantasia": "lugar legal",
+      "email": "teste@teste.com.br",
+      "phone": "88888888",
+      "celular": "999999999",
+      "logradouro": "Servidão Ricardo Neves",
+      "numero": "",
+      "bairro": "Ingleses do Rio Vermelho",
+      "complemento": "",
+      "localidade": "Florianópolis",
+      "uf": "SC",
+      "cep": "88058-088",
+      "id": 7
+    },
+    {
+      "razaosocial": "O Lugar Legal",
+      "CNPJ": "12.345.670/0019-0",
+      "fantasia": "lugar legal",
+      "email": "teste@teste.com.br",
+      "phone": "88888888",
+      "celular": "999999999",
+      "logradouro": "Servidão Ricardo Neves",
+      "numero": "",
+      "bairro": "Ingleses do Rio Vermelho",
+      "complemento": "",
+      "localidade": "Florianópolis",
+      "uf": "SC",
+      "cep": "88058-088",
+      "id": 8
     }
   ],
-  "imagem": []
+  "imagem": [],
   "medications": [
     {
       "medicamentos": "Paracetamol",

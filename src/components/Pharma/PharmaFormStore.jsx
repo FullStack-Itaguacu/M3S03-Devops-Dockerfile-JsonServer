@@ -25,6 +25,7 @@ export function PharmaFormStore() {
             alert('CEP inválido');
             return;
         }
+
         fetch(`https://viacep.com.br/ws/${formulario.cep}/json/`)
             .then((response) => response.json())
             .then((data) => {
@@ -39,10 +40,11 @@ export function PharmaFormStore() {
                 setValue('uf', data.uf);
 
                 console.log(data);
-            });
+            })
     };
 
     const onSubmit = (pharmadata) => {
+        debugger;
         fetch('http://localhost:5000/pharmacys', {
             method: 'POST',
             body: JSON.stringify(pharmadata),
@@ -50,8 +52,21 @@ export function PharmaFormStore() {
                 'Content-Type': 'application/json; charset=UTF-8',
             },
         })
+        
             .then(() => console.log(pharmadata))
-            .catch((err) => console.log(err));
+            .then(() => {
+                if (formulario.ok) {
+                    alert('Cadastrado com sucesso');
+                    setFormulario("");
+                    setEndereco("");
+                } else {
+                    alert('Erro ao cadastrar, verifique os dados e tente novamente');
+                }
+            })
+            .catch(error => {
+                console.log('Erro ao cadastrar farmácia..', error);
+                alert('Erro ao cadastrar, verifique os dados e tente novamente');
+            });
     };
 
     function handleGoBack() {
@@ -64,7 +79,7 @@ export function PharmaFormStore() {
                 Cadastrar nova Farmácia
             </h2>
 
-            <form className="row g-3 mt-1 ps-4 pe-4 pt-2" 
+            <form className="row g-3 mt-1 ps-4 pe-4 pt-2"
                 onSubmit={handleSubmit(onSubmit)}
             >
                 <h4 className="row md-1">
@@ -147,8 +162,8 @@ export function PharmaFormStore() {
                 <fieldset className="col-md-2 col-lg-2 mt-3">
                     <label htmlFor="cep" className="form-lg-label mx-2">
                         CEP
-                    </label>    
-                        {/*<p>{ `CEP: ${formulario.cep}` }</p>*/}
+                    </label>
+                    {/*<p>{ `CEP: ${formulario.cep}` }</p>*/}
                     <input
                         type="text"
                         className="form-control"
@@ -173,35 +188,35 @@ export function PharmaFormStore() {
                     <label htmlFor="numero" className="form-med-label mx-2">
                         Número
                     </label>
-                    <input 
-                        type="text" 
-                        value={endereco?.numero} {...register("numero")} 
+                    <input
+                        type="text"
+                        value={endereco?.numero} {...register("numero")}
                     />
                 </fieldset>
-                <fieldset className="col-md-6 col-lg-2 mt-3">                   
+                <fieldset className="col-md-6 col-lg-2 mt-3">
                     <label htmlFor="bairro" className="form-med-label mx-2">
                         Bairro
                     </label>
-                    <input 
-                        type="text" 
+                    <input
+                        type="text"
                         value={endereco?.bairro} {...register("bairro")}
                     />
                 </fieldset>
-                <fieldset className="col-md-6 mt-3">    
+                <fieldset className="col-md-6 mt-3">
                     <label htmlFor="complemento" className="form-med-label mx-2">
                         Complemento
                     </label>
-                    <input 
-                        type="text" 
+                    <input
+                        type="text"
                         value={endereco?.complemento} {...register("complemento")}
                     />
                 </fieldset>
-                <fieldset className="col-md-6 col-lg-4 mt-3">          
+                <fieldset className="col-md-6 col-lg-4 mt-3">
                     <label htmlFor="localidade" className="form-med-label mx-2">
                         Cidade
                     </label>
-                    <input 
-                        type="text" 
+                    <input
+                        type="text"
                         value={endereco?.localidade} {...register("localidade")}
                     />
                 </fieldset>
@@ -209,17 +224,17 @@ export function PharmaFormStore() {
                     <label htmlFor="uf" className="form-med-label mx-2">
                         Estado
                     </label>
-                    <input 
-                        type="text" 
+                    <input
+                        type="text"
                         value={endereco?.uf} {...register("uf")}
                     />
                 </fieldset>
-                    <div className="mt-3">
-                        <input type="submit" value="Enviar" />
-                    </div>
-                    <div className="mt-3">
-                        <input type="button" value="Voltar" onClick={handleGoBack} />
-                    </div>
+                <div className="mt-3">
+                    <input type="submit" value="Enviar" />
+                </div>
+                <div className="mt-3">
+                    <input type="button" value="Voltar" onClick={handleGoBack} />
+                </div>
             </form >
         </div >
     );
