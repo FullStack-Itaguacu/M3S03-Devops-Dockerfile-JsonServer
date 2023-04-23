@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-//import './Footer.css;
+import './Footer.css';
 
 const Footer = () => {
 
@@ -18,14 +18,11 @@ const Footer = () => {
   }, []);*/}
 
   return (
-    <footer className="bg-light py-1">
-      <Container>
-        <Row>
-          <Col className="text-center">
-            <p>Desenvolvido por Ricardo Werner &copy; {new Date().getFullYear()}</p>
-          </Col>
-        </Row>
-      </Container>
+    <footer className="footer-container">
+      <div>
+          <h6>&copy; Copyright Pharmacy Central System - {new Date().getFullYear()}</h6>
+          <h6>Desenvolvido por Ricardo Werner {new Date().getFullYear()}</h6>
+      </div>
     </footer>
   );
 };

@@ -1,13 +1,18 @@
-.footerContainer {
+.footer-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   background-color: #fff;
   color: #000;
   font-size: 12px;
   border-top: 1px solid #8d77ec;
-  padding: 0 20px;
+
 }
 
-
+.footer-container h6 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 20px;
+  padding: 0;
+}

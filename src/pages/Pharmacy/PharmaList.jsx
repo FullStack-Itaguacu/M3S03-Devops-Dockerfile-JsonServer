@@ -31,12 +31,12 @@ class PharmaList extends Component {
                     <td>{pharma.CNPJ}</td>
                     <td>{pharma.fantasia}</td>
                     <td>{pharma.email}</td>
-                    <td>{pharma.phone}</td>
+                    {/*<td>{pharma.phone}</td>
                     <td>{pharma.celular}</td>
                     <td>{pharma.logradouro}</td>
                     <td>{pharma.numero}</td>
                     <td>{pharma.bairro}</td>
-                    <td>{pharma.complemento}</td>
+            <td>{pharma.complemento}</td>*/}
                     <td>{pharma.localidade}</td>
                     <td>{pharma.uf}</td>
                 </tr>
@@ -57,12 +57,12 @@ class PharmaList extends Component {
                         <th>CNPJ</th>
                         <th>Nome Fantasia</th>
                         <th>Email</th>
-                        <th>Telefone</th>
+                        {/*<th>Telefone</th>
                         <th>Celular</th>
                         <th>Logradouro</th>
                         <th>Número</th>
                         <th>Bairro</th>
-                        <th>Complemento</th>
+        <th>Complemento</th>*/}
                         <th>Localidade</th>
                         <th>UF</th>
                     </tr>

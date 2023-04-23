@@ -3,7 +3,7 @@ import Accordion from "react-bootstrap/Accordion";
 
 export function Doubts() {
     return (
-        <Accordion defaultActiveKey="0" flush className="container pt-1">
+        <Accordion defaultActiveKey="" flush className="container pt-1">
             <Accordion.Item eventKey="0" className="mt-3 p-4">
                 <Accordion.Header>Problema para realizar o login?</Accordion.Header>
                 <Accordion.Body>

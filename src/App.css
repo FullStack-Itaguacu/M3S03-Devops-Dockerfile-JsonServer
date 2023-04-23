@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+
 :root{
     margin: 0;
     pqdding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Gilda Display', serif;
 }

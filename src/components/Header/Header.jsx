@@ -10,25 +10,25 @@ const Header = () => {
                 <h1 className="header-logo">
                     <img src={logo1} alt="logo" width={200} /></h1>
             </div>
-            <nav className="header__nav">
-                <ul className="header__nav-list">
-                    <li className="header__nav-item">
-                        <a href="/pharmacy" className="header__nav-link">
+            <nav className="header-nav">
+                <ul className="header-nav-list">
+                    <li className="header-nav-item">
+                        <a href="/pharmacy" className="header-nav-link">
                             Farmácias
                         </a>
                     </li>
-                    <li className="header__nav-item">
-                        <a href="/medication" className="header__nav-link">
+                    <li className="header-nav-item">
+                        <a href="/medication" className="header-nav-link">
                             Medicamentos
                         </a>
                     </li>
-                    <li className="header__nav-item">
-                        <a href="/register" className="header__nav-link">
+                    <li className="header-nav-item">
+                        <a href="/register" className="header-nav-link">
                             Cadastro
                         </a>
                     </li>
-                    <li className="header__nav-item">
-                        <a href="/faq" className="header__nav-link">
+                    <li className="header-nav-item">
+                        <a href="/faq" className="header-nav-link">
                             FAQ
                         </a>
                     </li>
