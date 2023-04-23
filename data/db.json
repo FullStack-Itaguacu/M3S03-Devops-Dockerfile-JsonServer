@@ -10,10 +10,11 @@
       "celular": "(48) 99999-0000",
       "logradouro": "Rua das Flores",
       "numero": "123",
-      "bairro": "Centro",
+      "bairro": "Canasvieiras",
       "complemento": "Sala 101",
       "localidade": "Florianópolis",
       "uf": "SC",
+      "cep": "88054-300",
       "id": 1
     },
     {
@@ -29,6 +30,7 @@
       "complemento": "Loja 02",
       "localidade": "Florianópolis",
       "uf": "SC",
+      "cep": "88058-971",
       "id": 2
     },
     {
@@ -44,6 +46,7 @@
       "complemento": "Sala 203",
       "localidade": "Florianópolis",
       "uf": "SC",
+      "cep": "880085-400",
       "id": 3
     },
     {
@@ -59,12 +62,43 @@
       "complemento": "Loja 05",
       "localidade": "Florianópolis",
       "uf": "SC",
+      "cep": "88062-075",
       "id": 4
+    },
+    {
+      "razaosocial": "Lugar Legal",
+      "CNPJ": "12.345.670/0019-0",
+      "fantasia": "lugar legal",
+      "email": "teste@teste.com.br",
+      "phone": "",
+      "celular": "999999999",
+      "logradouro": "Rua Camatiá",
+      "numero": "10",
+      "bairro": "Vila Romana",
+      "complemento": "",
+      "localidade": "São Paulo",
+      "uf": "SP",
+      "cep": "05045-040",
+      "id": 5
+    },
+    {
+      "razaosocial": "O Lugar Legal",
+      "CNPJ": "12.345.670/0019-0",
+      "fantasia": "lugar legal",
+      "email": "teste@teste.com.br",
+      "phone": "88888888",
+      "celular": "999999999",
+      "logradouro": "Rua do Vasco",
+      "numero": "10",
+      "bairro": "Ingleses do Rio Vermelho",
+      "complemento": "",
+      "localidade": "Florianópolis",
+      "uf": "SC",
+      "cep": "88058-080",
+      "id": 6
     }
   ],
-  "imagem": {
-    "imagem": "caixa-sem-imagem.jpg"
-  },
+  "imagem": []
   "medications": [
     {
       "medicamentos": "Paracetamol",

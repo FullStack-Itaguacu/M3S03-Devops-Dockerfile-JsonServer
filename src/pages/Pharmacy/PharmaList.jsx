@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Table from "react-bootstrap/Table";
 
 class PharmaList extends Component {
     constructor(props) {
@@ -25,6 +26,7 @@ class PharmaList extends Component {
             return (
                 <tr key={pharma.id}>
                     <td>{pharma.id}</td>
+                    <td>{pharma.cep}</td>
                     <td>{pharma.razaosocial}</td>
                     <td>{pharma.CNPJ}</td>
                     <td>{pharma.fantasia}</td>
@@ -46,10 +48,11 @@ class PharmaList extends Component {
     render() {
 
         return (
-            <table className="table table-striped" aria-labelledby="tabelLabel">
+            <table className="table table-hover" aria-labelledby="tabelLabel">
                 <thead>
                     <tr>
                         <th>Id</th>
+                        <th>CEP</th>
                         <th>Razão Social</th>
                         <th>CNPJ</th>
                         <th>Nome Fantasia</th>
