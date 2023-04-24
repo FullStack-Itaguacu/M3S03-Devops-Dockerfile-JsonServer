@@ -66,22 +66,6 @@
       "id": 4
     },
     {
-      "razaosocial": "Razão Social ",
-      "CNPJ": "11222333444455",
-      "fantasia": "Nome Fantasia",
-      "email": "teste@teste.com.br",
-      "phone": "88888888",
-      "celular": "999999999",
-      "logradouro": "Servidão Ricardo Neves",
-      "numero": "51",
-      "bairro": "Ingleses do Rio Vermelho",
-      "complemento": "",
-      "localidade": "Florianópolis",
-      "uf": "SC",
-      "cep": "88058-088",
-      "id": 5
-    },
-    {
       "razaosocial": "Quem Sabe ",
       "CNPJ": "44333555000167",
       "fantasia": "lugar legal",
@@ -95,7 +79,7 @@
       "localidade": "Florianópolis",
       "uf": "SC",
       "cep": "88058-089",
-      "id": 6
+      "id": 5
     },
     {
       "razaosocial": "C Quem Sabe ",
@@ -111,7 +95,7 @@
       "localidade": "Florianópolis",
       "uf": "SC",
       "cep": "88058-088",
-      "id": 7
+      "id": 6
     }
   ],
   "imagem": [],
@@ -135,46 +119,6 @@
       "id": 2
     },
     {
-      "medicamentos": "Paracetamol",
-      "laboratorio": "Medley",
-      "dosagem": "1 x 12 horas",
-      "preco": "10,00",
-      "tipo": "Medicamento controlado",
-      "descricao": "Dores em geral",
-      "id": 3
-    },
-    {
-      "imagem": "",
-      "medicamento": "",
-      "laboratorio": "Cimed",
-      "dosagem": "1 x 12 horas",
-      "preco": "10,00",
-      "tipo": "Medicamento comum",
-      "descricao": "Dores pelo corpo",
-      "medicamentos": "Paracetamol",
-      "id": 4
-    },
-    {
-      "imagem": "",
-      "medicamentos": "para etamol",
-      "laboratorio": "axe",
-      "dosagem": "1 x 12 horas",
-      "preco": "10,00",
-      "tipo": "Medicamento controlado",
-      "descricao": "dores em geral ",
-      "id": 5
-    },
-    {
-      "imagem": "",
-      "medicamentos": "Paracetamol",
-      "laboratorio": "Cimed",
-      "dosagem": "1 x 12 horas",
-      "preco": "10,00",
-      "tipo": "Medicamento controlado",
-      "descricao": "dores",
-      "id": 6
-    },
-    {
       "imagem": "",
       "medicamentos": "Dramal",
       "laboratorio": "Medley",
@@ -182,7 +126,27 @@
       "preco": "300,00",
       "tipo": "Medicamento controlado",
       "descricao": "Morfina",
-      "id": 7
+      "id": 3
+    },
+    {
+      "imagem": "",
+      "medicamentos": "Pinicilina",
+      "laboratorio": "Pharmus",
+      "dosagem": "12ml",
+      "preco": "400,00",
+      "tipo": "Medicamento controlado",
+      "descricao": "Antibiótico",
+      "id": 4
+    },
+    {
+      "imagem": "",
+      "medicamentos": "Tramau",
+      "laboratorio": "x-man",
+      "dosagem": "10ml",
+      "preco": "390,00",
+      "tipo": "Medicamento controlado",
+      "descricao": "Dores fortes",
+      "id": 5
     }
   ]
 }

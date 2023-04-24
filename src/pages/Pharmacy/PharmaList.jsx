@@ -30,8 +30,8 @@ class PharmaList extends Component {
                     <td>{pharma.razaosocial}</td>
                     <td>{pharma.CNPJ}</td>
                     <td>{pharma.fantasia}</td>
-                    <td>{pharma.email}</td>
-                    {/*<td>{pharma.phone}</td>
+                    {/*<td>{pharma.email}</td>
+                    <td>{pharma.phone}</td>
                     <td>{pharma.celular}</td>
                     <td>{pharma.logradouro}</td>
                     <td>{pharma.numero}</td>
@@ -48,7 +48,7 @@ class PharmaList extends Component {
     render() {
 
         return (
-            <table className="table table-hover" aria-labelledby="tabelLabel">
+            <table className="table table-bordered table-hover">
                 <thead>
                     <tr>
                         <th>Id</th>
@@ -56,8 +56,8 @@ class PharmaList extends Component {
                         <th>Razão Social</th>
                         <th>CNPJ</th>
                         <th>Nome Fantasia</th>
-                        <th>Email</th>
-                        {/*<th>Telefone</th>
+                        {/*<th>Email</th>
+                        <th>Telefone</th>
                         <th>Celular</th>
                         <th>Logradouro</th>
                         <th>Número</th>

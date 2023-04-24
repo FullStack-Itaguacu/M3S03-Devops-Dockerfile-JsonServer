@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import IMask from "imask";
 import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
@@ -56,10 +56,8 @@ export function PharmaFormStore() {
         
             .then(() => console.log(pharmadata))
             .then(() => {
-                if (formulario.ok) {
+                if (formulario) {
                     alert('Cadastrado com sucesso');
-                    setFormulario("");
-                    setEndereco("");
                 }
             })
            };
@@ -77,9 +75,9 @@ export function PharmaFormStore() {
             <form className="row g-3 mt-1 ps-4 pe-4 pt-2"
                 onSubmit={handleSubmit(onSubmit)}
             >
-                <h4 className="row md-1">
+                <h5 className="row md-1">
                     Dados Empresa
-                </h4>
+                </h5>
                 <fieldset className="col-md-6 col-lg-4 mt-3">
                     <label htmlFor="razaosocial" className="form-med-label">
                         Razão Social
@@ -167,7 +165,12 @@ export function PharmaFormStore() {
                         onChange={(e) => atualizarCep('cep', e.target.value)}
                     />
                     <div className="mt-2">
-                        <button type="button" onClick={buscarCep}>Buscar CEP</button>
+                        <button 
+                            type="button"
+                            className="btn btn-outline-dark btn-sm" 
+                            onClick={buscarCep}>
+                                Buscar CEP
+                        </button>
                     </div>
                 </fieldset>
                 <fieldset className="col-lg-9 mt-3">

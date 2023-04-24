@@ -41,10 +41,12 @@ function AddMedicamentos() {
             const response = await axios.post('http://localhost:5000/medications', medicamentos);
 
             setMedicamentos([medicamentos, response.data]);
-            console.log(setMedicamentos)
+            console.log(setMedicamentos);
+
         } catch (error) {
             console.error(error);
         }
+        alert("Medicamento cadastrado com sucesso!");
     };
 
     function handleGoBack() {
