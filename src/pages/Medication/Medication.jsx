@@ -15,7 +15,10 @@ const MedicationPage = () => {
         <>
             <h1>Lista de Medicamentos</h1>
             <MedicationList />
-            <button onClick={handleLogout}>Logout</button>
+            <button 
+                type="button"
+                className="btn btn-danger me-md-1"
+                onClick={handleLogout}>Logout</button>
         </>
     );
 }

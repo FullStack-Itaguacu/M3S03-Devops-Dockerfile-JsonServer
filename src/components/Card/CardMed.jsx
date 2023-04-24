@@ -22,16 +22,16 @@ export function CardMed({
 
   return (
     <div className="container col-2 col-md-2 col-sm-12 bg">
-      <div className="card" style={{ height: "12rem"}}>
+      <div className="card mb-3" style={{ height: "12rem"}}>
         <div className="card-body"
               data-bs-toggle="modal"
               data-bs-target={Card} >
           <h5 className="card-title">{medicamentos}</h5>
-          <h6 className="card-subtitle md-2 text-muted">{dosagem}</h6>
+          <h6 className="card-subtitle md-1 text-muted">{dosagem}</h6>
           <p className="card-text">
             {descricao ? descricao.substring(0, 50) : null}...
           </p>
-          <div className="d-grid col-6 mx-1">
+          <div className="d-grid col-6">
             <button type="button" 
             className="btn btn-outline-info btn-sm mt-4" 
             data-bs-toggle="modal" 

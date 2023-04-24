@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Header.css';
 import logo1 from '../../imagens/logo1.jpg';
 
 const Header = () => {
+
 
     return (
         <header className="header">

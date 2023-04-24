@@ -14,7 +14,10 @@ const AddMedicationPage = () => {
     return (
         <>
             <PharmaFormMed />
-            <button onClick={handleLogout}>Logout</button>
+            <button 
+                type="button"
+                className="btn btn-danger me-md-1"
+                onClick={handleLogout}>Logout</button>
         </>
     );
 }

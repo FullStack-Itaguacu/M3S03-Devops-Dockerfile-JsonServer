@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import IMask from "imask";
 import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import { Col } from "react-bootstrap";
@@ -44,7 +45,7 @@ export function PharmaFormStore() {
     };
 
     const onSubmit = (pharmadata) => {
-        debugger;
+        //debugger;
         fetch('http://localhost:5000/pharmacys', {
             method: 'POST',
             body: JSON.stringify(pharmadata),
@@ -59,15 +60,9 @@ export function PharmaFormStore() {
                     alert('Cadastrado com sucesso');
                     setFormulario("");
                     setEndereco("");
-                } else {
-                    alert('Erro ao cadastrar, verifique os dados e tente novamente');
                 }
             })
-            .catch(error => {
-                console.log('Erro ao cadastrar farmácia..', error);
-                alert('Erro ao cadastrar, verifique os dados e tente novamente');
-            });
-    };
+           };
 
     function handleGoBack() {
         history(-1);
@@ -159,7 +154,7 @@ export function PharmaFormStore() {
                     />
                     {errors.celular && <p role="alert">{errors.celular?.message}</p>}
                 </fieldset>
-                <fieldset className="col-md-2 col-lg-2 mt-3">
+                <fieldset className="row col-2 mt-3">
                     <label htmlFor="cep" className="form-lg-label mx-2">
                         CEP
                     </label>
@@ -175,65 +170,100 @@ export function PharmaFormStore() {
                         <button type="button" onClick={buscarCep}>Buscar CEP</button>
                     </div>
                 </fieldset>
-                <fieldset className="col-md-8 col-lg-4 mt-3">
+                <fieldset className="col-lg-9 mt-3">
                     <label htmlFor="" className="form-lg-label mx-2">
                         Endereço
                     </label>
                     <input
                         type="text"
+                        className="form-control"
+                        placeholder="Endereço"
                         value={endereco?.logradouro} {...register("logradouro")}
                     />
                 </fieldset>
-                <fieldset className="col-md-2 col-lg-2 mt-3">
+                <fieldset className="col-lg-1 mt-3">
                     <label htmlFor="numero" className="form-med-label mx-2">
                         Número
                     </label>
                     <input
                         type="text"
+                        className="form-control"
+                        placeholder="Número"
                         value={endereco?.numero} {...register("numero")}
                     />
                 </fieldset>
-                <fieldset className="col-md-6 col-lg-2 mt-3">
+                <fieldset className="col-lg-3 mt-3">
                     <label htmlFor="bairro" className="form-med-label mx-2">
                         Bairro
                     </label>
                     <input
                         type="text"
+                        className="form-control"
+                        placeholder="Bairro"
                         value={endereco?.bairro} {...register("bairro")}
                     />
                 </fieldset>
-                <fieldset className="col-md-6 mt-3">
+                <fieldset className="col-lg-5 mt-3">
                     <label htmlFor="complemento" className="form-med-label mx-2">
                         Complemento
                     </label>
                     <input
                         type="text"
+                        className="form-control"
+                        placeholder="Complemento"
                         value={endereco?.complemento} {...register("complemento")}
                     />
                 </fieldset>
-                <fieldset className="col-md-6 col-lg-4 mt-3">
+                <fieldset className="col-lg-3 mt-3">
                     <label htmlFor="localidade" className="form-med-label mx-2">
                         Cidade
                     </label>
                     <input
                         type="text"
+                        className="form-control"
+                        placeholder="Cidade"
                         value={endereco?.localidade} {...register("localidade")}
                     />
                 </fieldset>
-                <fieldset className="col-md-6 col-lg-4 mt-3">
+                <fieldset className="col-lg-1 mt-3">
                     <label htmlFor="uf" className="form-med-label mx-2">
                         Estado
                     </label>
                     <input
                         type="text"
+                        className="form-control"
+                        placeholder="UF"
                         value={endereco?.uf} {...register("uf")}
                     />
                 </fieldset>
-                <div className="mt-3">
-                    <input type="submit" value="Enviar" />
-                </div>
-                <div className="mt-3">
-                    <input type="button" value="Voltar" onClick={handleGoBack} />
+                <div className="d-grid gap-2 d-md-flex justify-content-md-end mt-3">
+                    <input 
+                        type="button"
+                        className="btn btn-outline-info me-md-1" 
+                        value="Voltar" 
+                        onClick={handleGoBack} 
+                    />
+                    <input
+                        id="reset"
+                        value="Limpar"
+                        type="reset"
+                        className="btn btn-secondary me-md-1"
+                        onClick={() => {
+                            setFormulario({
+                                razaosocial: "",
+                                CNPJ: "",
+                                fantasia: "",
+                                email: "",
+                                phone: "",
+                                celular: "",
+                            });
+                        }}
+                    />
+                    <input className="btn btn-success"
+                        type="submit"
+                        value="Cadastrar"
+                    />
+                    
                 </div>
             </form >
         </div >

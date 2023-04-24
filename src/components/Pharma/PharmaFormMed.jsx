@@ -151,14 +151,20 @@ function AddMedicamentos() {
                         value={medicamentos.descricao || ""}
                         className="form-control"
                         id="inputDescricao"
-                        rows="5"
+                        rows="4"
                         maxLength={870}
                         onChange={(e) =>
                             setMedicamentos({ ...medicamentos, descricao: e.target.value })
                         }
                     ></textarea>
                 </fieldset>
-                <div className="d-grid gap-1 d-md-flex justify-content-md-end">
+                <div className="d-grid gap-1 d-md-flex justify-content-md-end mt-2">
+                <input 
+                        type="button"
+                        className="btn btn-outline-info me-md-1" 
+                        value="Voltar" 
+                        onClick={handleGoBack} 
+                    />                
                     <input
                         id="reset"
                         value="Limpar"
@@ -180,9 +186,6 @@ function AddMedicamentos() {
                         type="submit"
                         value="Cadastrar"  
                     />
-                </div>
-                <div>
-                    <input type="button" value="Voltar" onClick={handleGoBack} />
                 </div>
             </form>
         </div>
