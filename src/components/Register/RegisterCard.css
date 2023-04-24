@@ -13,7 +13,7 @@
     align-items: center;
     height: 300px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(164, 90, 250, 0.8);
+    box-shadow: 0 0 15px rgba(164, 90, 250, 0.8);
 }
 
 .register-nav-link {
@@ -34,7 +34,7 @@
     border: 1px solid #000;
     border-radius: 5px;
     background-color: rgb(88, 6, 182);
-    color: #000;
+    color: #fff;
     font-size: 16px;
     cursor: pointer;
     outline: none;
