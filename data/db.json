@@ -103,49 +103,50 @@
     {
       "medicamentos": "Paracetamol",
       "laboratorio": "Medley",
-      "dosagem": "1 x 12 horas",
+      "dosagem": "500 mg a 1 g, a cada 4 a 6 horas",
       "preco": "10,00",
       "tipo": "Medicamento comum",
-      "descricao": "Dor de Cabeça",
+      "descricao": "O Paracetamol é um medicamento analgésico e antitérmico utilizado no alívio de dores de intensidade leve a moderada, bem como no tratamento de febre. Ele age no sistema nervoso central para reduzir a dor e a inflamação. A dosagem recomendada para adultos é de 500 mg a 1 g, a cada 4 a 6 horas, não excedendo a dose máxima diária de 4 g.",
       "id": 1
     },
     {
-      "medicamentos": "Paracetamol",
-      "laboratorio": "EMS",
-      "dosagem": "1 x 12 horas",
-      "preco": "10,00",
-      "tipo": "Medicamento comum",
-      "descricao": "Dor e enxaqueca",
-      "id": 2
-    },
-    {
       "imagem": "",
-      "medicamentos": "Dramal",
+      "medicamentos": "Tramadol",
       "laboratorio": "Medley",
-      "dosagem": "1 x 12 horas",
+      "dosagem": "50 a 100 mg a cada 4 a 6 horas",
       "preco": "300,00",
       "tipo": "Medicamento controlado",
-      "descricao": "Morfina",
-      "id": 3
+      "descricao": "O Tramadol é um analgésico opioide usado para aliviar a dor moderada a intensa. O medicamento atua no sistema nervoso central, diminuindo a percepção de dor. A dosagem recomendada para adultos é de 50 a 100 mg a cada 4 a 6 horas, não excedendo a dose máxima diária de 400 mg.",
+      "id": 2
     },
     {
       "imagem": "",
       "medicamentos": "Pinicilina",
       "laboratorio": "Pharmus",
-      "dosagem": "12ml",
-      "preco": "400,00",
+      "dosagem": "20ml",
+      "preco": "120,00",
       "tipo": "Medicamento controlado",
-      "descricao": "Antibiótico",
-      "id": 4
+      "descricao": "A Penicilina é um antibiótico usado para tratar infecções bacterianas, como amigdalite, bronquite, pneumonia, meningite e infecções urinárias. O medicamento funciona inibindo o crescimento bacteriano e é administrado por via oral ou injetável. A dosagem recomendada varia de acordo com o tipo e gravidade da infecção.",
+      "id": 3
     },
     {
       "imagem": "",
-      "medicamentos": "Tramau",
-      "laboratorio": "x-man",
-      "dosagem": "10ml",
-      "preco": "390,00",
-      "tipo": "Medicamento controlado",
-      "descricao": "Dores fortes",
+      "medicamentos": "Novalgina 1g",
+      "laboratorio": "Sanofi",
+      "dosagem": "1g a cada 6 horas",
+      "preco": "25,00",
+      "tipo": "Medicamento comum",
+      "descricao": "A Novalgina 1g é um medicamento analgésico e antitérmico utilizado no tratamento de dores e febre de intensidade moderada a forte. Ele age inibindo a produção de substâncias responsáveis pela dor e febre no organismo. A dosagem recomendada para adultos é de 1 comprimido a cada 6 horas, não excedendo a dose máxima diária de 4 comprimidos.",
+      "id": 4
+    }
+    {
+      "imagem": "",
+      "medicamentos": "Naldecon Xarope",
+      "laboratorio": "Biolab",
+      "dosagem": "10 ml a cada 8 horas",
+      "preco": "45,00",
+      "tipo": "Medicamento comum",
+      "descricao": "O Naldecom Xarope é um medicamento expectorante utilizado para tratar a tosse produtiva. Ele age fluidificando as secreções, facilitando a sua eliminação. A dosagem recomendada para adultos é de 10 ml a cada 8 horas. É importante beber bastante líquido enquanto estiver utilizando o medicamento para ajudar a expelir as secreções.",
       "id": 5
     }
   ]

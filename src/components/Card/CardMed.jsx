@@ -30,7 +30,7 @@ export function CardMed({
           <h5 className="card-title">{medicamentos}</h5>
           <h6 className="card-subtitle md-1 text-muted">{dosagem}</h6>
           <p className="card-text">
-            {descricao ? descricao.substring(0, 50) : null}...
+            {descricao ? descricao.substring(0, 15) : null}...
           </p>
           <div className="d-grid col-6">
             <button type="button"
