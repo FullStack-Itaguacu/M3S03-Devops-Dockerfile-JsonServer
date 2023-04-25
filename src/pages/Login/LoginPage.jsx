@@ -21,6 +21,7 @@ const LoginPage = () => {
         <div id="login-container">
             <div id="login-master">
                 <h1 className="login-titulo">Inicial Login</h1>
+                <span className="login-span">Pharmacy Central System - Acesse o sistema</span>
                 {/*<p>{String(authenticated)}</p>*/}
             <form className="login-form" onSubmit={handleSubmit}>
             {/*<div className="form-group">
