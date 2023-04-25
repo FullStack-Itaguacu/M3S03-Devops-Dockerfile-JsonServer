@@ -15,7 +15,11 @@ const AddUserPage = () => {
         <>
             <AddUserCard />
             <div>
-                <input type="button" value="Voltar" onClick={handleGoBack} />
+                <input
+                    type="button" 
+                    className="btn btn-danger mx-3 my-2" 
+                    value="Voltar" 
+                    onClick={handleGoBack} />
             </div>
         </>
     );
