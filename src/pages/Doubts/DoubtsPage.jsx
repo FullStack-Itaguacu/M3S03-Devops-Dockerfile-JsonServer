@@ -15,7 +15,7 @@ const DoubtsPage = () => {
             <Doubts />
             <input 
                 type="button"
-                className="btn btn-outline-info me-md-1" 
+                className="btn btn-danger mx-3 my-2" 
                 value="Voltar" 
                 onClick={handleGoBack} 
             />

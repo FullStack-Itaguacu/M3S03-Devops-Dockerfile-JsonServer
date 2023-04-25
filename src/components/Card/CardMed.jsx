@@ -23,18 +23,20 @@ export function CardMed({
 
   return (
     <div className="container col-2 m-1">
-      <div className="card mx-3" style={{ height: "10rem", width: "11rem" }}>
+      <div className="card mx-3" style={{ height: "12rem"}}>
         <div className="card-body"
           data-bs-toggle="modal"
           data-bs-target={Card} >
           <h5 className="card-title">{medicamentos}</h5>
-          <h6 className="card-subtitle md-1 text-muted">{dosagem}</h6>
-          <p className="card-text">
-            {descricao ? descricao.substring(0, 15) : null}...
-          </p>
+          <h6 className="card-subtitle md-1 text-muted">
+            {dosagem ? dosagem.substring(0, 5) : null}...
+          </h6>
+          <h6 className="card-text">
+            {descricao ? descricao.substring(0, 10) : null}...
+          </h6>
           <div className="d-grid col-6">
             <button type="button"
-              className="btn btn-primary btn-sm mt-1"
+              className="btn btn-primary btn-sm mt-5"
               data-bs-toggle="modal"
               data-bs-target="#exampleModaCenter"
               onClick={() => setModalIsOpen(true)}
