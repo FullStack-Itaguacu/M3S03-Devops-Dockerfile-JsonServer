@@ -1,8 +1,5 @@
 .footer-container {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
   background-color: #fff;
   color: #000;
   font-size: 12px;
@@ -13,6 +10,12 @@
 .footer-container h6 {
   font-size: 14px;
   font-weight: 600;
+
+}
+
+.copy, .dev {
+  display: flex;
+  align-items: center;
+  margin-left: 250px;
   margin-top: 20px;
-  padding: 0;
 }
