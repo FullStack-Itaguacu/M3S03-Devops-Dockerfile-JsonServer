@@ -6,12 +6,6 @@
       "confirmPassword": "A12345678",
       "id": 1
     },
-    {
-      "email": "teste@teste.com.br",
-      "password": "123456789",
-      "confirmPassword": "123456789",
-      "id": 2
-    }
   ],
   "pharmacys": [
     {
@@ -77,70 +71,6 @@
       "uf": "SC",
       "cep": "88062-075",
       "id": 4
-    },
-    {
-      "razaosocial": "Quem Sabe ",
-      "CNPJ": "44333555000167",
-      "fantasia": "lugar legal",
-      "email": "teste@teste.com.br",
-      "phone": "55556666",
-      "celular": "987654321",
-      "logradouro": "Servidão Nossa Senhora Aparecida",
-      "numero": "10",
-      "bairro": "Ingleses do Rio Vermelho",
-      "complemento": "",
-      "localidade": "Florianópolis",
-      "uf": "SC",
-      "cep": "88058-089",
-      "id": 5
-    },
-    {
-      "razaosocial": "C Quem Sabe ",
-      "CNPJ": "11.222.333/4444-55",
-      "fantasia": "Nome Fantasia",
-      "email": "wernerdive@gmail",
-      "phone": "55556666",
-      "celular": "987654321",
-      "logradouro": "Servidão Ricardo Neves",
-      "numero": "51",
-      "bairro": "Ingleses do Rio Vermelho",
-      "complemento": "",
-      "localidade": "Florianópolis",
-      "uf": "SC",
-      "cep": "88058-088",
-      "id": 6
-    },
-    {
-      "razaosocial": "O Lugar Legal",
-      "CNPJ": "12.345.670/0019-0",
-      "fantasia": "lugar legal",
-      "email": "teste@teste.com.br",
-      "phone": "66655432",
-      "celular": "987654321",
-      "logradouro": "Rua Camatiá",
-      "numero": "10",
-      "bairro": "Vila Romana",
-      "complemento": "",
-      "localidade": "São Paulo",
-      "uf": "SP",
-      "cep": "05045-040",
-      "id": 7
-    },
-    {
-      "razaosocial": "C Quem Sabe ",
-      "CNPJ": "44333555000167",
-      "fantasia": "Nome Fantasia",
-      "email": "soeu@soeu.com.br",
-      "phone": "55556666",
-      "celular": "987654321",
-      "logradouro": "Servidão Nossa Senhora Aparecida",
-      "numero": "10",
-      "bairro": "Ingleses do Rio Vermelho",
-      "complemento": "",
-      "localidade": "Florianópolis",
-      "uf": "SC",
-      "cep": "88058-089",
-      "id": 8
     }
   ],
   "imagem": [],
@@ -193,26 +123,6 @@
       "tipo": "Medicamento comum",
       "descricao": "O Naldecom Xarope é um medicamento expectorante utilizado para tratar a tosse produtiva. Ele age fluidificando as secreções, facilitando a sua eliminação. A dosagem recomendada para adultos é de 10 ml a cada 8 horas. É importante beber bastante líquido enquanto estiver utilizando o medicamento para ajudar a expelir as secreções.",
       "id": 5
-    },
-    {
-      "imagem": "",
-      "medicamentos": "Dramal",
-      "laboratorio": "Pharmus",
-      "dosagem": "10ml",
-      "preco": "390,00",
-      "tipo": "Medicamento controlado",
-      "descricao": "Medicamento para tratamento de dores extrema",
-      "id": 6
-    },
-    {
-      "imagem": "",
-      "medicamentos": "Doriu",
-      "laboratorio": "axe",
-      "dosagem": "1 x 12 horas",
-      "preco": "10,00",
-      "tipo": "Medicamento comum",
-      "descricao": "Dor de  cabeça e mau estar",
-      "id": 7
     }
   ]
 }
