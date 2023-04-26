@@ -43,6 +43,8 @@ function AddUser() {
       },
     });
     console.log(userData);
+    alert("Cadastro realizado com sucesso !!!!")
+    
   };
   
   const history = useNavigate();
