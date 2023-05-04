@@ -5,7 +5,7 @@ import LoginPage from './pages/Login/LoginPage';
 import AddUserPage from './pages/User/AddUser';
 import PharmacyPage from './pages/Pharmacy/Pharmacy';
 import PharmaList from './pages/Pharmacy/PharmaList';
-import Map from './pages/PharmaMap/PharmaMap';
+import Map from './pages/PharmacyMap/PharmacyMap';
 import MedicationPage from './pages/Medication/Medication';
 import RegisterPage from './pages/Register/Register';
 import AddPharmacy from './pages/Pharmacy/AddPharmacy';

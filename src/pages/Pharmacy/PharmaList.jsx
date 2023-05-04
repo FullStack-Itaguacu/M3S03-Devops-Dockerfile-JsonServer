@@ -160,6 +160,14 @@ class PharmaList extends Component {
                                     <strong>UF:</strong>
                                     {selectedPharma.uf}
                                 </p>
+                                <p className="row text-muted  mx-3">
+                                    <strong>Latitude:</strong>
+                                    {selectedPharma.latitude}
+                                </p>
+                                <p className="row text-muted  mx-3">
+                                    <strong>Longitude:</strong>
+                                    {selectedPharma.longitude}
+                                </p>
                             </div>
                             <button
                                 type="button"
