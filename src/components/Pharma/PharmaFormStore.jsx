@@ -173,7 +173,7 @@ export function PharmaFormStore() {
                         </button>
                     </div>
                 </fieldset>
-                <fieldset className="col-lg-9 mt-3">
+                <fieldset className="col-lg-10 mt-3">
                     <label htmlFor="" className="form-lg-label mx-2">
                         Endereço
                     </label>
@@ -184,7 +184,7 @@ export function PharmaFormStore() {
                         value={endereco?.logradouro} {...register("logradouro")}
                     />
                 </fieldset>
-                <fieldset className="col-lg-1 mt-3">
+                <fieldset className="col-lg-2 mt-3">
                     <label htmlFor="numero" className="form-med-label mx-2">
                         Número
                     </label>
@@ -206,7 +206,7 @@ export function PharmaFormStore() {
                         value={endereco?.bairro} {...register("bairro")}
                     />
                 </fieldset>
-                <fieldset className="col-lg-5 mt-3">
+                <fieldset className="col-lg-7 mt-3">
                     <label htmlFor="complemento" className="form-med-label mx-2">
                         Complemento
                     </label>
@@ -237,6 +237,28 @@ export function PharmaFormStore() {
                         className="form-control"
                         placeholder="UF"
                         value={endereco?.uf} {...register("uf")}
+                    />
+                </fieldset>
+                <fieldset className="col-lg-4 mt-3">
+                    <label htmlFor="latitude" className="form-med-label mx-2">
+                        Latitude
+                    </label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Latitude"
+                        value={endereco?.latitude} {...register("latitude")}
+                    />
+                </fieldset>
+                <fieldset className="col-lg-4 mt-3">
+                    <label htmlFor="longitude" className="form-med-label mx-2">
+                        Longitude
+                    </label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Longitude"
+                        value={endereco?.longitude} {...register("longitude")}
                     />
                 </fieldset>
                 <div className="d-grid gap-2 d-md-flex justify-content-md-end mt-3">

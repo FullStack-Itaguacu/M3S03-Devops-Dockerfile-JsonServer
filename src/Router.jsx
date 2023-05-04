@@ -5,12 +5,13 @@ import LoginPage from './pages/Login/LoginPage';
 import AddUserPage from './pages/User/AddUser';
 import PharmacyPage from './pages/Pharmacy/Pharmacy';
 import PharmaList from './pages/Pharmacy/PharmaList';
+import Map from './pages/PharmaMap/PharmaMap';
 import MedicationPage from './pages/Medication/Medication';
 import RegisterPage from './pages/Register/Register';
 import AddPharmacy from './pages/Pharmacy/AddPharmacy';
 import AddMedicationPage from './pages/Medication/AddMedication';
 import DoubtsPage from './pages/Doubts/DoubtsPage';
-//import PharmaMap from './pages/PharmaMap/PharmaMap';
+
 
 
 const AppRouter = () => {
@@ -35,6 +36,7 @@ const AppRouter = () => {
                     <Route exact path="/adduser" element={<AddUserPage />} />
                     <Route exact path="/pharmacy" element={<Private><PharmacyPage /></Private>} />
                     <Route exact path="/pharmalist" element={<Private><PharmaList /></Private>} />
+                    <Route exact path="/pharmamap" element={<Private><Map /></Private>} />
                     <Route exact path="/medication" element={<Private><MedicationPage /></Private>} />
                     <Route exact path="/register" element={<Private><RegisterPage /></Private>} />                   
                     <Route exact path="/addmedication" element={<AddMedicationPage />} />

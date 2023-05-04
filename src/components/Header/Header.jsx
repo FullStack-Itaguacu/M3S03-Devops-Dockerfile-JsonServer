@@ -19,6 +19,11 @@ const Header = () => {
                         </a>
                     </li>
                     <li className="header-nav-item">
+                        <a href="/pharmamap" className="header-nav-link">
+                            Mapa
+                        </a>
+                    </li>
+                    <li className="header-nav-item">
                         <a href="/medication" className="header-nav-link">
                             Medicamentos
                         </a>
