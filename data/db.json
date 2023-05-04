@@ -5,6 +5,12 @@
       "password": "A12345678",
       "confirmPassword": "A12345678",
       "id": 1
+    },
+    {
+      "email": "teste@teste.com.br",
+      "password": "123456789",
+      "confirmPassword": "123456789",
+      "id": 2
     }
   ],
   "pharmacys": [

@@ -4,3 +4,8 @@
   box-sizing: border-box;
 }
 
+#mapa {
+  width: 100%;
+  height: 180px;
+}
+
