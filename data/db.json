@@ -15,7 +15,6 @@
   ],
   "pharmacys": [
     {
-      "cep": "88054-300",
       "razaosocial": "Farmácia Floripa LTDA",
       "CNPJ": "12.345.678/0001-01",
       "fantasia": "Farmácia Floripa",
@@ -28,6 +27,9 @@
       "complemento": "Sala 101",
       "localidade": "Florianópolis",
       "uf": "SC",
+      "latitude": "-27.4314190",
+      "longitude": "-48.4666523",
+      "cep": "88054-300",
       "id": 1
     },
     {
@@ -43,7 +45,9 @@
       "complemento": "Loja 02",
       "localidade": "Florianópolis",
       "uf": "SC",
-      "cep": "88058-971",
+      "latitude": "-27.4284766",
+      "longitude": "-48.4034269",
+      "cep": "88058-539",
       "id": 2
     },
     {
@@ -59,7 +63,9 @@
       "complemento": "Sala 203",
       "localidade": "Florianópolis",
       "uf": "SC",
-      "cep": "880085-400",
+      "latitude": "-27.6065557",
+      "longitude": "-48.4661271",
+      "cep": "88085-400",
       "id": 3
     },
     {
@@ -75,6 +81,8 @@
       "complemento": "Loja 05",
       "localidade": "Florianópolis",
       "uf": "SC",
+      "latitude": "-27.6003148",
+      "longitude": "-48.4657123",
       "cep": "88062-075",
       "id": 4
     }

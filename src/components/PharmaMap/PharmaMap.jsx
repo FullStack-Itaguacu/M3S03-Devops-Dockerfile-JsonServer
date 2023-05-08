@@ -1,46 +1,43 @@
-import React, { useState, useEffect } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import { Icon } from 'leaflet';
+import React, { useEffect, useState } from "react";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
-export const PharmaMap = ({ addresses }) => {
-    const [pharmacies, setPharmacies] = useState([]);
-    const [mapCenter, setMapCenter] = useState([0, 0]);
-    const [mapZoom, setMapZoom] = useState(13);
+export const PharmaMap = () => {
+  const [pharmacys, setPharmacys] = useState([]);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const promises = addresses.map((address) => 
-                    fetch(`https://nominatim.openstreetmap.org/search?q=${address.address}&format=json&limit=1`)
-                );
-                const responses = await Promise.all(promises);
-                const data = await Promise.all(responses.map((response) => response.json()));
-                const coordinates = data.map((item) => [item[0].lat, item[0].lon]);
-                setMapCenter(coordinates[0]);
-            } catch (error) {
-                console.log(error);
-            }
-        };
-        fetchData();
-    }, [addresses]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch("http://localhost:5000/pharmacys");
+      const data = await response.json();
+      setPharmacys(data);
+    };
 
-    return (
-        <div>
-            <MapContainer center={mapCenter} zoom={mapZoom} scrollWheelZoom={false}>
-                <TileLayer
-                    attribution='&amp;copy <a href="https://www.openstreetmap.org/" > OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                {pharmacies.map((pharmacy) => (
-                    <Marker key={pharmacy.id} position={[pharmacy.latitude, pharmacy.longitude]}>
-                        <Popup>
-                            {pharmacy.name}
-                        </Popup>
-                    </Marker>
-                ))}
-            </MapContainer>
-        </div>
-    );
+    fetchData();
+  }, []);
 
-}
+  const mapCenter = [-27.5931161, -48.5225146];
 
+  return (
+    <MapContainer center={mapCenter} zoom={13} style={{ height: "100vh" }}>
+      <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+      {pharmacys.map((pharmacy) => (
+        <Marker key={pharmacy.id} position={[pharmacy.latitude, pharmacy.longitude]}>
+          <Popup>
+            {pharmacy.id}<br></br>
+            {pharmacy.razaosocial}<br></br>
+            {pharmacy.CNPJ}<br></br>
+            {pharmacy.fantasia}<br></br>
+            {pharmacy.celular}<br></br>
+            {pharmacy.cep}<br></br>
+            {pharmacy.logradouro},
+            {pharmacy.numero}<br></br>
+            {pharmacy.bairro}<br></br>
+            {pharmacy.localidade} -
+            {pharmacy.uf}<br></br>
+            {pharmacy.latitude}<br></br>
+            {pharmacy.longitude}<br></br>
+          </Popup>
+        </Marker>
+      ))}
+    </MapContainer>
+  );
+};

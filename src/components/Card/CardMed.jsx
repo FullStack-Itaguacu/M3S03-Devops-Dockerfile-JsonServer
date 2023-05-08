@@ -34,7 +34,7 @@ export function CardMed({
           <h6 className="card-text">
             {descricao ? descricao.substring(0, 10) : null}...
           </h6>
-          <div className="d-grid col-6">
+          <div className="d-grid col-5">
             <button type="button"
               className="btn btn-primary btn-sm mt-5"
               data-bs-toggle="modal"

@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Navigate, useNavigate } from "react-router-dom";
-import IMask from "imask";
-import { Form } from "react-bootstrap";
-import { Button } from "react-bootstrap";
-import { Col } from "react-bootstrap";
-import { Row } from "react-bootstrap";
 
 export function PharmaFormStore() {
     const history = useNavigate();
@@ -13,6 +8,8 @@ export function PharmaFormStore() {
     const [endereco, setEndereco] = useState();
     const [formulario, setFormulario] = useState({
         cep: '',
+        latitude: '',
+        longitude: '',
     });
 
     const atualizarCep = (campo, valor) => {
@@ -41,7 +38,42 @@ export function PharmaFormStore() {
                 setValue('uf', data.uf);
 
                 console.log(data);
+
+                const { logradouro, localidade, uf } = data;
+                const enderecoCompleto = `${logradouro}, ${localidade}, ${uf}`
+
+                fetch(`https://nominatim.openstreetmap.org/search?format=json&limit=1&q=${enderecoCompleto}`)
+                    .then((response) => response.json())
+                    .then((data) => {
+                        const { lat, lon } =data[0];
+
+                        setValue('latitude', lat);
+                        setValue('longitude', lon);
+
+                        const pharmacyData = {
+                            ...pharmadata,
+                            latitude: lat,
+                            longitude: lon,
+                          };
+
+                        fetch('http:localhost:5000/pharmacys', {
+                            method: 'POST',
+                            body: JSON.stringify(pharmacyData),
+                            headers: {
+                                'Content-Type': 'aplication/jso; charset=UTF-8',
+                            },
+                        })
+                        .then(() => console.log(pharmacyData))
+                        .then(() => {
+                            if(formulario) {
+                                alert("Cadastro realizado com Sucesso!!");
+                            }
+                        })
+                        .cath((error) => console.log(error));
+                    })
+                    .cath((error) => console.log(error));
             })
+            .catch((error) => console.log(error));
     };
 
     const onSubmit = (pharmadata) => {
@@ -281,6 +313,15 @@ export function PharmaFormStore() {
                                 email: "",
                                 phone: "",
                                 celular: "",
+                                cep: "",
+                                logradouro: "",
+                                numero: "",
+                                bairro: "",
+                                complemento: "",
+                                localidade: "",
+                                uf: "",
+                                latitude: "",
+                                longitude: ""
                             });
                         }}
                     />
