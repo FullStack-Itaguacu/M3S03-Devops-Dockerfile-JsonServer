@@ -111,7 +111,7 @@ npm run dev
 
 Este projeto vem com o [JSON Server](https://www.npmjs.com/package/json-server) instalado e configurado.
 
-Este projeto já vem com o Bootstrap 5 e ract-bootstrap instalado e configurado.
+Este projeto já vem com o Bootstrap 5 e react-bootstrap instalado e configurado.
 
 login - teste@teste.com.br
 pwd - 123456789
