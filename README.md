@@ -1,10 +1,10 @@
-### Projeto Avaliativo do Módulo1
-## LAB365- FullStack - Itaguaçu
+## Projeto Avaliativo do Módulo1
+### LAB365- FullStack - Itaguaçu
 
-# Criação de sistema de gerenciamento de Farmácias e Medicamentos com React
-# Nome do sistema: Pharmacy Central System 
+#### Criação de sistema de gerenciamento de Farmácias e Medicamentos com React
+#### Nome do sistema: Pharmacy Central System 
 
-## 🔗 Links
+### 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/ricardo-werner)
 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ricardo-werner)
