@@ -120,5 +120,5 @@ pwd - 123456789
 ## Autor
 
 Ricardo Werner - 
-Dev em desenvolvimento - 
+Dev FullStack em desenvolvimento - 
 LAB365-FullStack-Itaguaçu
