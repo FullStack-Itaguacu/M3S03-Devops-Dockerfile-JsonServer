@@ -1,5 +1,5 @@
 # Devops 
-Repositório disponibilizado pelo anulo Ricardo para exemplificação e aplicação do dockerFile 
+Repositório disponibilizado pelo aluno Ricardo para exemplificação e aplicação do dockerFile 
 
 
 ## Projeto Avaliativo do Módulo1
