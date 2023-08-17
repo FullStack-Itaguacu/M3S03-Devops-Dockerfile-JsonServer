@@ -1,3 +1,7 @@
+# Devops 
+Repositório disponibilizado pelo anulo Ricardo para exemplificação e aplicação do dockerFile 
+
+
 ## Projeto Avaliativo do Módulo1
 ### LAB365- FullStack - Itaguaçu
 
